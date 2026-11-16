@@ -110,3 +110,11 @@ position (0.1.0 counted 32 at the same size); 0.1.2 measures again when it count
 
 Probe: via.render.Renderer is a native singleton and has get/set_ImageQualityRate (and
 get_RenderConfig); no sdk.get_tdb in this REFramework build. 0.1.2's script uses the Renderer.
+
+## 0.1.2 test (2026-11-16): render resolution dropdown and FSR work
+
+"Everything seemed to go well" (user). The script set the scale through via.render.Renderer at
+every step (applied within a frame or two): DLAA 3840x2160 (K), Quality 2561x1440 (K, 18 jitter
+positions), Balanced 2227x1252 (K, 24), Performance 1920x1080 (M, 32), each jitter count matching
+what DLSS suggests. FSR 3.1.6 through the D3D12 bridge at 50%, 58%, 67% and native, then back to
+DLSS DLAA, no errors.
