@@ -41,3 +41,47 @@ the TAA reads no depth and no effect mask: DLSS's depth has to come from the sce
 depth target of the draws just before the TAA, and the stretch's t0). No HUD pass in these frames.
 Next: shader bytecode and SceneInfo contents (ReShade.ini DumpShaders) to find the jitter and the
 velocity encoding.
+
+## Shaders and SceneInfo (2026-11-16, `docs/shaders`, capture 3)
+
+RDEF names, TAA psbeedaaab: t0 HDRImage, t1 PrevHDRImage, t2 Velocity; cb0 SceneInfo, cb1 Tonemap
+(preTonemapRange, AABlend). Same maths as RE2's PreTonemap2_PS: colour x Exposure (VS
+vs45c9c59d: WhitePtSrv t0 x Tonemap.exposureAdjustment), unjittered by projMat[2].xy x
+screenInverseSize x 0.5, history at uv + velocity x (0.5, -0.5). ps180ea9ae = tonemap + lens
+distortion, vignette (Kerare), film grain parameters, colour correction LUTs, image plane;
+ps0aad5957 = noise / film grain (EnvironmentInfo.timeMillisecond), not sharpening; ps09af4c8f =
+stretch (ReadonlyDepth t0, SrcImage t1, screenInverseSize); ps1828aeac = bloom upsample, also used
+for the composite into the TAA output.
+
+SceneInfo, 608 bytes (RE2/RE3: 512):
+
+| Byte | Field |
+|---|---|
+| 0 | viewProjMat (row-major) |
+| 64 / 128 | viewMat / viewInvMat |
+| 192 | projMat: [0] x scale, [5] y scale, **row 2 xy = jitter** (RE2's projElement[0].zw), [11] = -1 |
+| 256 | projInvMat (row 3 xy = jitter / scale) |
+| 320 | viewProjInvMat |
+| 384 | prevViewProjMat |
+| 448 / 460 | prevCameraPos / cameraNearPlane (0.05) |
+| 464 / 476 | prevCameraDir / cameraFarPlane |
+| 480 | viewFrustum[6] |
+| 576 | ZToLinear, subdivisionLevel |
+| 592 / 600 | screenSize / screenInverseSize |
+
+Capture 3 values: jitter 0, -0.000154 (-0.17 px at 2160), projInv row 3 y -7.28e-5 = -0.000154 / 2.119.
+
+The overlay's Performance setting wrote 0.5 for the script and the script reported setting it, but
+capture 4 was still at 3840x2160: `set_ImageQualityRate` through call_native_func does nothing in
+this build either.
+
+## 0.1.0 (2026-11-16, untested)
+
+RE3DLSS-DX11's upscaler pointed at RE7: TAA beedaaab (colour t0, velocity t2, no mask), bloom
+composite 1828aeac (only its draw into the TAA output), tonemap 180ea9ae, film grain 0aad5957 (the
+"sharpening" step, overlay label changed), stretch 09af4c8f; SceneInfo offsets above (608-byte
+buffers tracked and patched). Depth: the last depth target bound before the TAA (main.cpp tracks it
+per context), checked against the colour size, with a shader view made by the add-on for FSR's copy.
+The longer jitter patch uses RE7's matrices (viewProj, projMat row 2, projInv row 3,
+viewProjInv row 3). The Lua script writes a probe of RenderConfig to RE7DLSS-DX11_probe.txt and
+also tries the setter through the method object.

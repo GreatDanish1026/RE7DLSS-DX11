@@ -19,8 +19,52 @@ local function set_rate(rc, v)
     sdk.call_native_func(rc, rc_type, "set_ImageQualityRate", v)
 end
 
+-- One-off probe (0.1.0): in the TDB49 build get_ImageQualityRate read 0 and set_ImageQualityRate
+-- through call_native_func changed nothing. Lists RenderConfig's quality-related members and tries
+-- the method objects directly; written to reframework/data/RE7DLSS-DX11_probe.txt.
+local probed = false
+local function probe()
+    probed = true
+    local out = {}
+    local function add(s) out[#out + 1] = s end
+    local ok, err = pcall(function()
+        add("RenderConfig type: " .. tostring(rc_type and rc_type:get_full_name()))
+        local rc = sdk.get_native_singleton("via.render.RenderConfig")
+        add("singleton: " .. tostring(rc))
+        if not rc_type then return end
+        for _, m in ipairs(rc_type:get_methods()) do
+            local n = m:get_name()
+            if n:find("Quality") or n:find("Rate") or n:find("Resolution") or n:find("Scale") then
+                local rt = m:get_return_type()
+                add(string.format("method %s -> %s (%d params)", n, rt and rt:get_full_name() or "?", m:get_num_params()))
+            end
+        end
+        for _, f in ipairs(rc_type:get_fields()) do
+            local n = f:get_name()
+            if n:find("Quality") or n:find("Rate") or n:find("Resolution") or n:find("Scale") then
+                add(string.format("field %s : %s offset %d", n, f:get_type():get_full_name(), f:get_offset_from_base()))
+            end
+        end
+        local getm = rc_type:get_method("get_ImageQualityRate")
+        local setm = rc_type:get_method("set_ImageQualityRate")
+        add("get method: " .. tostring(getm) .. ", set method: " .. tostring(setm))
+        if getm and rc then
+            add("get via method:call -> " .. tostring(getm:call(rc)))
+            add("get via call_native_func -> " .. tostring(sdk.call_native_func(rc, rc_type, "get_ImageQualityRate")))
+        end
+    end)
+    if not ok then add("error " .. tostring(err)) end
+    fs.write("RE7DLSS-DX11_probe.txt", table.concat(out, "\n"))
+end
+
+local function set_rate_method(rc, v)
+    local m = rc_type:get_method("set_ImageQualityRate")
+    if m then m:call(rc, v) end
+end
+
 re.on_frame(function()
     frame = frame + 1
+    if not probed and frame > 120 then probe() end
     if frame % 30 ~= 0 then return end
     if not rc_type then
         fs.write("RE7DLSS-DX11_status.txt", "error via.render.RenderConfig not found")
@@ -36,7 +80,11 @@ re.on_frame(function()
         if want > 0 then
             if original == nil and known then original = cur end
             if not known then
-                if last_set ~= want then set_rate(rc, want); last_set = want end
+                if last_set ~= want then
+                    set_rate(rc, want)
+                    pcall(set_rate_method, rc, want)  -- (probe: the method object directly)
+                    last_set = want
+                end
                 fs.write("RE7DLSS-DX11_status.txt", string.format("%.4f %d set", want, frame))
                 return
             end

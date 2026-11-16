@@ -326,10 +326,10 @@ std::unordered_map<uint64_t, ViewInfo> g_views;
 std::unordered_map<uint64_t, std::vector<uint8_t>> g_cbData;
 std::unordered_map<uint64_t, void*> g_mapped;
 
-// SceneInfo (512 bytes) always; other constant buffers only while shaders are in the dump list.
+// SceneInfo (608 bytes) always; other constant buffers only while shaders are in the dump list.
 bool TrackCb(const resource_desc& desc) {
     if (desc.type != resource_type::buffer || (desc.usage & resource_usage::constant_buffer) == 0) return false;
-    if (desc.buffer.size == 512 || desc.buffer.size == 256) return true;  // SceneInfo, Tonemap
+    if (desc.buffer.size == rd::kSceneInfoBytes || desc.buffer.size == 256) return true;  // SceneInfo, Tonemap
     return desc.buffer.size <= 4096 && !(g_dumpPs.empty() && g_dumpCs.empty());
 }
 
@@ -372,7 +372,7 @@ void OnUnmapBuffer(device*, resource r) {
     if (m == g_mapped.end()) return;
     std::vector<uint8_t>& v = g_cbData[r.handle];
     // SceneInfo: the jitter is replaced before the GPU sees it (upscaler.cpp, longer sequence).
-    if (v.size() == 512) rd::PatchSceneInfo(static_cast<float*>(m->second));
+    if (v.size() == rd::kSceneInfoBytes) rd::PatchSceneInfo(static_cast<float*>(m->second));
     memcpy(v.data(), m->second, v.size());
     g_mapped.erase(m);
 }
@@ -384,7 +384,7 @@ void CopyCb(resource r, const void* data, uint64_t offset, uint64_t size) {
     if (it == g_cbData.end() || offset >= it->second.size()) return;
     // SceneInfo written with UpdateSubresource: the game's source data is patched in place (it
     // writes it again every frame).
-    if (it->second.size() == 512 && offset == 0 && (size == UINT64_MAX || size >= 512))
+    if (it->second.size() == rd::kSceneInfoBytes && offset == 0 && (size == UINT64_MAX || size >= rd::kSceneInfoBytes))
         rd::PatchSceneInfo(const_cast<float*>(static_cast<const float*>(data)));
     if (size == UINT64_MAX || offset + size > it->second.size()) size = it->second.size() - offset;
     memcpy(it->second.data() + offset, data, static_cast<size_t>(size));
@@ -452,6 +452,7 @@ struct Context {
     rect scissor = {};
     std::vector<resource_view> rtvs;
     resource_view dsv = {0};
+    resource_view lastDsv = {0};  // the last non-null depth target (RE7's TAA reads no depth)
     // capture
     std::vector<std::string> lines;
     uint32_t draws = 0;
@@ -566,6 +567,7 @@ void OnBindRenderTargets(command_list* cl, uint32_t count, const resource_view* 
     Context& c = Ctx(cl);
     c.rtvs.assign(rtvs, rtvs + count);
     c.dsv = dsv;
+    if (dsv.handle) c.lastDsv = dsv;
     if (!Recording()) return;
     device* dev = cl->get_device();
     std::string s;
@@ -865,6 +867,7 @@ bool GetGameState(command_list* cl, GameState* out) {
     out->rtvCount = static_cast<uint32_t>(c.rtvs.size() < 8 ? c.rtvs.size() : 8);
     for (uint32_t i = 0; i < out->rtvCount; ++i) out->rtv[i] = c.rtvs[i];
     out->dsv = c.dsv;
+    out->lastDsv = c.lastDsv;
     out->vp = c.vp;
     out->scissor = c.scissor;
     return true;

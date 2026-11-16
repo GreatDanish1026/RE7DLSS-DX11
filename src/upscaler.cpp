@@ -1,6 +1,7 @@
 // DLSS in place of Resident Evil 7's TAA, DirectX 11 build (docs/FINDINGS.md). The design is
 // RE7DLSS's (the DirectX 12 build has the same post chain):
 //
+// (RE2/RE3 notes below; RE7's ids, registers and SceneInfo offsets are in the constants further down.)
 // The TAA pass (PreTonemap2_PS, psddfad309) is a full-screen draw reading the effect mask (t0),
 // depth (t1, reverse-Z), the scene colour (t2), last frame's TAA output (t3) and the velocity (t4:
 // NDC offset to the previous position, y up), with the camera constants (SceneInfo) in b0. DLSS
@@ -56,24 +57,28 @@ using namespace reshade::api;
 namespace rd {
 namespace {
 
-// Resident Evil 7 DirectX 11 shaders (docs/FINDINGS.md): the same ids, registers and SceneInfo
-// as RE2's DX11 build (captures 2026-11-15); only the final output pass differs (4c582391).
-constexpr uint32_t kTaaPs = 0xddfad309;      // PreTonemap2_PS
-constexpr uint32_t kTaaMask = 0, kTaaDepth = 1, kTaaColor = 2, kTaaMotion = 4;
-constexpr uint32_t kBloomPs = 0x629a5b35;    // bloom composite (additive into the TAA output)
-constexpr uint32_t kTonemapPs = 0x81003188;  // tonemap (t0 by pixel position)
-constexpr uint32_t kSharpenPs = 0xff2662f2;  // the game's sharpening (t0)
-constexpr uint32_t kStretchPs = 0xaff99b25;  // render size -> output size (t0 depth, t1 colour)
+// Resident Evil 7 DirectX 11 shaders (docs/FINDINGS.md, captures 2026-11-16): an older RE Engine
+// than RE2/RE3's DX11 builds, with the same post chain but other shaders. The TAA reads no depth
+// and no effect mask: the depth comes from the last depth target the scene drew with.
+constexpr uint32_t kTaaPs = 0xbeedaaab;      // TAA (HDRImage t0, PrevHDRImage t1, Velocity t2)
+constexpr uint32_t kTaaColor = 0, kTaaMotion = 2;
+constexpr uint32_t kBloomPs = 0x1828aeac;    // bloom upsample; the composite is its draw into the TAA output
+constexpr uint32_t kTonemapPs = 0x180ea9ae;  // tonemap, lens effects (t0 by pixel position)
+constexpr uint32_t kSharpenPs = 0x0aad5957;  // film grain (t0); RE7 has no sharpening pass
+constexpr uint32_t kStretchPs = 0x09af4c8f;  // render size -> output size (t0 depth, t1 colour)
 constexpr uint32_t kStretchColor = 1;
 constexpr int kToggleHotkey = VK_F9;
 
-// SceneInfo (cb0 of the TAA, tonemap and sharpening), as float indices.
+// SceneInfo (cb0 of the TAA, tonemap and grain; 608 bytes), as float indices.
 constexpr int kViewProj = 0;            // row_major float4x4, byte 0
-constexpr int kProjElement0 = 40;       // byte 160: x scale, y scale, jitter x, jitter y (clip space)
-constexpr int kPrevViewProj = 72;       // byte 288
-constexpr int kScreenSize = 92;         // byte 368: width, height, 1 / width, 1 / height
-constexpr int kNearPlane = 98;          // byte 392: cameraNearPlane
-constexpr int kSceneInfoFloats = 128;   // 512 bytes
+constexpr int kProjMat = 48;            // byte 192: projMat; [0] x scale, [5] y scale
+constexpr int kJitter = 56;             // byte 224: projMat row 2 x, y = jitter (as RE2's projElement[0].zw)
+constexpr int kProjInv = 64;            // byte 256: projInvMat (row 3 xy: jitter / scale)
+constexpr int kViewProjInv = 80;        // byte 320
+constexpr int kPrevViewProj = 96;       // byte 384
+constexpr int kNearPlane = 115;         // byte 460: cameraNearPlane
+constexpr int kScreenSize = 148;        // byte 592: width, height, 1 / width, 1 / height
+constexpr int kSceneInfoFloats = 152;   // 608 bytes
 
 // ---------------------------------------------------------------- settings
 
@@ -584,8 +589,29 @@ bool CameraCut(const float* scene) {
     return diff > 1.0f || !std::isfinite(diff);
 }
 
-float JitterX(const float* scene, uint32_t w) { return -scene[kProjElement0 + 2] * w * 0.5f * (g_set.flipJitterX ? -1 : 1); }
-float JitterY(const float* scene, uint32_t h) { return scene[kProjElement0 + 3] * h * 0.5f * (g_set.flipJitterY ? -1 : 1); }
+float JitterX(const float* scene, uint32_t w) { return -scene[kJitter] * w * 0.5f * (g_set.flipJitterX ? -1 : 1); }
+float JitterY(const float* scene, uint32_t h) { return scene[kJitter + 1] * h * 0.5f * (g_set.flipJitterY ? -1 : 1); }
+
+// The scene depth for the upscalers: the last depth target bound before the TAA, at the render
+// size. FSR's copy (and DLSS's optional r32f copy) needs a shader view of it: made once per texture.
+resource g_depthRes = {0};
+resource_view g_depthSrv = {0};
+
+resource_view DepthSrv(device* dev, resource depth) {
+    if (depth == g_depthRes && g_depthSrv.handle) return g_depthSrv;
+    if (g_depthSrv.handle) dev->destroy_resource_view(g_depthSrv);
+    g_depthSrv = {0};
+    g_depthRes = depth;
+    const resource_desc d = dev->get_resource_desc(depth);
+    const format f = d.texture.format == format::r24_g8_typeless ? format::r24_unorm_x8_uint
+                     : d.texture.format == format::r32_g8_typeless ? format::r32_float_x8_uint
+                                                                     : format::r32_float;
+    if (!dev->create_resource_view(depth, resource_usage::shader_resource, resource_view_desc(f), &g_depthSrv)) {
+        g_depthSrv = {0};
+        Log("couldn't make a shader view of the depth (format %u)", static_cast<uint32_t>(d.texture.format));
+    }
+    return g_depthSrv;
+}
 
 // Binds a render target (no depth), viewport and scissor of w x h.
 void BindTarget(command_list* cl, resource_view rtv, uint32_t w, uint32_t h) {
@@ -637,10 +663,10 @@ std::atomic<bool> g_taaSeen{false};  // the game's TAA shader has run (gates the
 bool OnTaa(command_list* cl, const GameState& g) {
     g_taaSeen = true;
     device* dev = cl->get_device();
-    const resource depth = ViewResource(g.psSrv[kTaaDepth]);
+    const resource depth = ViewResource(g.lastDsv);
     const resource color = ViewResource(g.psSrv[kTaaColor]);
     const resource motion = ViewResource(g.psSrv[kTaaMotion]);
-    const resource mask = ViewResource(g.psSrv[kTaaMask]);
+    const resource mask = {0};  // RE7's TAA has no effect mask
     const resource target = ViewResource(g.rtv[0]);
     if (!depth.handle || !color.handle || !motion.handle || !target.handle || !g.rtv[0].handle) {
         Fail("TAA inputs not found (depth, colour, velocity or render target)");
@@ -662,6 +688,20 @@ bool OnTaa(command_list* cl, const GameState& g) {
             Log("a frame without motion vectors (velocity %ux%u, colour %ux%u): the game's TAA used", md.texture.width,
                 md.texture.height, cd.texture.width, cd.texture.height);
         return false;
+    }
+    const resource_desc dd = dev->get_resource_desc(depth);
+    if (dd.texture.width != cd.texture.width || dd.texture.height != cd.texture.height) {
+        static int logged = 0;
+        if (logged++ < 3)
+            Log("the last depth target (%ux%u) isn't the scene's (%ux%u): the game's TAA used", dd.texture.width,
+                dd.texture.height, cd.texture.width, cd.texture.height);
+        return false;
+    }
+    const resource_view depthSrv = DepthSrv(dev, depth);
+    {
+        static bool logged = false;
+        if (!logged) logged = true, Log("scene depth: %ux%u format %u", dd.texture.width, dd.texture.height,
+                                        static_cast<uint32_t>(dd.texture.format));
     }
     uint32_t renderW = cd.texture.width, renderH = cd.texture.height;
     const float sw = scene[kScreenSize], sh = scene[kScreenSize + 1];
@@ -721,7 +761,7 @@ bool OnTaa(command_list* cl, const GameState& g) {
     ID3D11Resource* motionIn = reinterpret_cast<ID3D11Resource*>(motion.handle);
     float mvScaleX = 0.5f * renderW, mvScaleY = -0.5f * renderH;  // NDC offsets, y up -> render pixels, y down
     if (g_set.mvFix) {
-        const float rawJx = -scene[kProjElement0 + 2] * renderW * 0.5f, rawJy = scene[kProjElement0 + 3] * renderH * 0.5f;
+        const float rawJx = -scene[kJitter] * renderW * 0.5f, rawJy = scene[kJitter + 1] * renderH * 0.5f;
         if (FixMotion(cl, g.psSrv[kTaaMotion], renderW, renderH, rawJx, rawJy)) {
             motionIn = reinterpret_cast<ID3D11Resource*>(g_mv.res.handle);
             mvScaleX = mvScaleY = 1.0f;
@@ -732,8 +772,8 @@ bool OnTaa(command_list* cl, const GameState& g) {
         dlss::Inputs in;
         in.color = reinterpret_cast<ID3D11Resource*>(color.handle);
         in.depth = reinterpret_cast<ID3D11Resource*>(depth.handle);
-        if (g_set.dlssDepthCopy && Ensure(dev, g_depth32, renderW, renderH, format::r32_float, false, "depth copy") &&
-            Blit(cl, g.psSrv[kTaaDepth], g_depth32.rtv, renderW, renderH))
+        if (g_set.dlssDepthCopy && depthSrv.handle && Ensure(dev, g_depth32, renderW, renderH, format::r32_float, false, "depth copy") &&
+            Blit(cl, depthSrv, g_depth32.rtv, renderW, renderH))
             in.depth = reinterpret_cast<ID3D11Resource*>(g_depth32.res.handle);
         in.motion = motionIn;
         in.output = reinterpret_cast<ID3D11Resource*>((sharpenDlss ? g_xs : g_x).res.handle);
@@ -755,7 +795,8 @@ bool OnTaa(command_list* cl, const GameState& g) {
     } else {
         // FSR runs on Direct3D 12: the depth is drawn into the shared r32f texture first.
         ID3D11RenderTargetView* depthRtv = bridge::DepthTarget(renderW, renderH, err);
-        if (!depthRtv || !Blit(cl, g.psSrv[kTaaDepth], resource_view{reinterpret_cast<uint64_t>(depthRtv)}, renderW, renderH)) {
+        if (!depthRtv || !depthSrv.handle ||
+            !Blit(cl, depthSrv, resource_view{reinterpret_cast<uint64_t>(depthRtv)}, renderW, renderH)) {
             Fail(err.empty() ? "couldn't copy the depth for FSR" : err);
             return false;
         }
@@ -769,7 +810,7 @@ bool OnTaa(command_list* cl, const GameState& g) {
         in.jitterX = jitterX, in.jitterY = jitterY;
         in.motionScaleX = mvScaleX;
         in.motionScaleY = mvScaleY;
-        const float nearZ = scene[kNearPlane], yScale = scene[kProjElement0 + 1];
+        const float nearZ = scene[kNearPlane], yScale = scene[kProjMat + 5];
         in.cameraNear = nearZ > 0 && nearZ < 10 ? nearZ : 0.01f;
         in.cameraFovY = yScale > 0.05f ? 2 * std::atan(1 / yScale) : 1.0f;
         in.sharpness = g_set.sharpness;
@@ -942,11 +983,12 @@ int ScriptStatus(float* scale, std::string* error) {
 // with 16 at Performance it leaves soft striped patches on still surfaces (Jill's face). While
 // upscaling, the main view's SceneInfo gets a Halton(2,3) sequence of that length instead, written
 // as the CPU fills the buffer, before the GPU reads it, so the game's draws, its TAA and the
-// upscaler all use the same jitter. In SceneInfo (floats; checked against a capture):
-//   projElement[0].zw (42, 43): jitter in clip units (jitter x px = -z * w / 2, y px = w * h / 2);
+// upscaler all use the same jitter. In RE7's SceneInfo (floats; checked against a capture
+// 2026-11-16):
+//   projMat row 2 xy (56, 57): jitter in clip units (jitter x px = -z * w / 2, y px = w * h / 2);
 //   viewProjMat (0..15, row-major, row vectors): columns x and y carry -jitter x the w column;
-//   viewProjInvMat (56..71): its row 3 carries the inverse (+= dx * row 0 + dy * row 1);
-//   projInvElements[1].xy (52, 53): jitter / projElement[0].xy.
+//   viewProjInvMat (80..95): its row 3 carries the inverse (+= dx * row 0 + dy * row 1);
+//   projInvMat row 3 xy (76, 77): jitter / projMat x, y scale (48, 53).
 // prevViewProjMat has no jitter, so motion vectors don't change.
 
 float Halton(uint32_t i, uint32_t b) {
@@ -962,10 +1004,12 @@ float Halton(uint32_t i, uint32_t b) {
 std::atomic<uint32_t> g_jitterPhases{0};  // the sequence length in use (0: the game's)
 
 void PatchJitter(float* s) {
-    const float jx = s[42], jy = s[43], sw = s[92], sh = s[93];
+    const float jx = s[kJitter], jy = s[kJitter + 1], sw = s[kScreenSize], sh = s[kScreenSize + 1];
+    const float ax = s[kProjMat], ay = s[kProjMat + 5];
     if (jx == 0 && jy == 0) return;  // views without jitter (shadows and the like)
     if (!(sw >= 64 && sh >= 64 && sw <= 16384 && sh <= 16384)) return;
-    if (!(s[40] > 0.05f && s[40] < 50 && s[41] > 0.05f && s[41] < 50)) return;
+    if (!(ax > 0.05f && ax < 50 && ay > 0.05f && ay < 50)) return;
+    if (s[kProjMat + 11] != -1.0f) return;  // not a perspective projection like the main view's
     if (std::fabs(jx) * sw > 2 || std::fabs(jy) * sh > 2) return;  // more than a pixel: not a jitter
     if (!g_outW) return;
     const float scale = sw / static_cast<float>(g_outW);
@@ -982,9 +1026,9 @@ void PatchJitter(float* s) {
         s[r * 4 + 0] -= dx * s[r * 4 + 3];
         s[r * 4 + 1] -= dy * s[r * 4 + 3];
     }
-    for (int c = 0; c < 4; ++c) s[56 + 12 + c] += dx * s[56 + c] + dy * s[56 + 4 + c];
-    s[42] = nx, s[43] = ny;
-    s[52] = nx / s[40], s[53] = ny / s[41];
+    for (int c = 0; c < 4; ++c) s[kViewProjInv + 12 + c] += dx * s[kViewProjInv + c] + dy * s[kViewProjInv + 4 + c];
+    s[kJitter] = nx, s[kJitter + 1] = ny;
+    s[kProjInv + 12] = nx / ax, s[kProjInv + 13] = ny / ay;
     g_jitterPhases = n;
     static uint32_t logged = 0;  // (0.1.1 logged this on almost every write)
     if (logged != n) logged = n, Log("jitter: %u positions at %.0fx%.0f (the game's 16 replaced)", n, sw, sh);
@@ -1081,6 +1125,8 @@ void UpscalerDestroyDevice(device* dev) {
     if (g_exposureUav) g_exposureUav->Release();
     if (g_exposureTex) g_exposureTex->Release();
     g_exposureCs = nullptr, g_exposureUav = nullptr, g_exposureTex = nullptr;
+    if (g_depthSrv.handle) dev->destroy_resource_view(g_depthSrv);
+    g_depthSrv = {0}, g_depthRes = {0};
     if (g_mvCs) g_mvCs->Release();
     if (g_mvCb) g_mvCb->Release();
     g_mvCs = nullptr, g_mvCb = nullptr;
@@ -1254,14 +1300,12 @@ void UpscalerOverlay() {
             ImGui::SeparatorText("Image quality");
             changed |= ImGui::Checkbox("Upscale below 100%", &g_set.upscale);
             Help("Off: below 100% DLSS anti-aliases at the render resolution and the game stretches the result.");
-            changed |= ImGui::Checkbox("Game's sharpening at output resolution", &g_set.sharpen);
-            Help("The game's own sharpening pass (its Sharpness setting), run on the upscaled image.");
+            changed |= ImGui::Checkbox("Game's film grain at output resolution", &g_set.sharpen);
+            Help("The game's film grain pass, run on the upscaled image. Off: no grain while upscaling.");
             changed |= ImGui::Checkbox("Use the game's exposure", &g_set.gameExposure);
             Help("Off (default): DLSS estimates the exposure itself. On: DLSS is told the game's exposure; in testing "
                  "this made characters' dithered fade (Leon close to the camera) look see-through. FSR always "
                  "estimates its own.");
-            changed |= ImGui::Checkbox("Use the game's effect mask", &g_set.effectMask);
-            Help("The mask the game's TAA uses for particles and effects: DLSS and FSR trust the current frame more there.");
             changed |= ImGui::Checkbox("Longer jitter sequence", &g_set.longJitter);
             Help("When upscaling, the game's 16 camera jitter positions are replaced by as many as DLSS asks for at "
                  "the render resolution (32 at Performance). Fewer leave soft striped patches on still surfaces such "
