@@ -45,6 +45,42 @@ local function probe()
                 add(string.format("field %s : %s offset %d", n, f:get_type():get_full_name(), f:get_offset_from_base()))
             end
         end
+        -- 0.1.1: the native singleton was null in RE7. Other ways to the RenderConfig object.
+        add("managed singleton RenderConfig: " .. tostring(sdk.get_managed_singleton("via.render.RenderConfig")))
+        local renderer = sdk.get_native_singleton("via.render.Renderer")
+        add("native singleton Renderer: " .. tostring(renderer))
+        local rt = sdk.find_type_definition("via.render.Renderer")
+        if rt then
+            for _, m in ipairs(rt:get_methods()) do
+                local n = m:get_name()
+                if n:find("Config") or n:find("Quality") or n:find("Rate") or n:find("Resolution") then
+                    add("Renderer method " .. n .. " -> " .. tostring(m:get_return_type() and m:get_return_type():get_full_name()))
+                end
+            end
+        end
+        local tdb = sdk.get_tdb and sdk.get_tdb()
+        if tdb then
+            local count = 0
+            for i = 0, tdb:get_num_types() - 1 do
+                local t = tdb:get_type(i)
+                local tn = t and t:get_full_name() or ""
+                if tn:find("RenderConfig") or tn:find("GraphicsOption") or tn:find("GraphicOption") or
+                   (tn:find("^app%.") and (tn:find("Option") or tn:find("Config"))) then
+                    for _, m in ipairs(t:get_methods() or {}) do
+                        local n = m:get_name()
+                        if n:find("ImageQuality") or n:find("RenderScale") or n:find("Resolution") then
+                            add("type " .. tn .. " method " .. n)
+                            count = count + 1
+                        end
+                    end
+                    add("type " .. tn .. (sdk.get_managed_singleton(tn) and " (managed singleton)" or "") ..
+                        (sdk.get_native_singleton(tn) and " (native singleton)" or ""))
+                end
+                if count > 80 then break end
+            end
+        else
+            add("no sdk.get_tdb")
+        end
         local getm = rc_type:get_method("get_ImageQualityRate")
         local setm = rc_type:get_method("set_ImageQualityRate")
         add("get method: " .. tostring(getm) .. ", set method: " .. tostring(setm))

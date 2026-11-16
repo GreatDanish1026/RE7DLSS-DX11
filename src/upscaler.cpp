@@ -79,6 +79,7 @@ constexpr int kPrevViewProj = 96;       // byte 384
 constexpr int kNearPlane = 115;         // byte 460: cameraNearPlane
 constexpr int kScreenSize = 148;        // byte 592: width, height, 1 / width, 1 / height
 constexpr int kSceneInfoFloats = 152;   // 608 bytes
+constexpr int kSceneInfoBufferFloats = 192;  // the add-on's copy: 768 bytes (a multiple of 256)
 
 // ---------------------------------------------------------------- settings
 
@@ -633,8 +634,12 @@ void BindPsSrv(command_list* cl, uint32_t slot, resource_view v) {
 
 // SceneInfo with the output size, bound as the pixel shader's b0.
 bool BindSceneInfoAtOutputSize(command_list* cl, const GameState& g, uint32_t w, uint32_t h) {
-    float scene[kSceneInfoFloats];
-    if (!ReadCb(g.psCb[0].buffer, g.psCb[0].offset, scene, sizeof(scene))) return false;
+    // RE7's SceneInfo is 608 bytes. D3D11 binds constant buffer ranges only in multiples of 256
+    // bytes (PSSetConstantBuffers1), so a 608-byte range didn't bind and the tonemap kept the game's
+    // render-size SceneInfo (0.1.0: the image in the top-left quarter). The copy is 768 bytes and
+    // bound whole.
+    float scene[kSceneInfoBufferFloats] = {};
+    if (!ReadCb(g.psCb[0].buffer, g.psCb[0].offset, scene, kSceneInfoFloats * sizeof(float))) return false;
     device* dev = cl->get_device();
     if (!g_sceneCb.handle &&
         !dev->create_resource(resource_desc(sizeof(scene), memory_heap::default_, resource_usage::constant_buffer), nullptr,
@@ -647,7 +652,7 @@ bool BindSceneInfoAtOutputSize(command_list* cl, const GameState& g, uint32_t w,
     scene[kScreenSize + 2] = 1.0f / w;
     scene[kScreenSize + 3] = 1.0f / h;
     cl->update_buffer_region(scene, g_sceneCb, 0, sizeof(scene));
-    const buffer_range cb = {g_sceneCb, 0, sizeof(scene)};
+    const buffer_range cb = {g_sceneCb, 0, UINT64_MAX};
     descriptor_table_update u = {};
     u.count = 1;
     u.type = descriptor_type::constant_buffer;

@@ -85,3 +85,19 @@ per context), checked against the colour size, with a shader view made by the ad
 The longer jitter patch uses RE7's matrices (viewProj, projMat row 2, projInv row 3,
 viewProjInv row 3). The Lua script writes a probe of RenderConfig to RE7DLSS-DX11_probe.txt and
 also tries the setter through the method object.
+
+## 0.1.0 test (2026-11-16)
+
+DLAA ran fine (user). DLSS started (NGX D3D11, preset K at DLAA, M at 50%); scene depth found
+(3840x2160 format 39, r32_typeless); motion fix and the 32-position jitter ran. The overlay's
+Performance did nothing; with the game's slider at 0.5, **the image showed in the top-left quarter
+with edge streaks over the rest** (screenshot). Cause: the tonemap samples t0 at SV_Position x
+SceneInfo.screenInverseSize, and the add-on's output-size SceneInfo copy (608 bytes) was bound as a
+range: D3D11 (PSSetConstantBuffers1) only binds ranges in multiples of 256 bytes, so the bind
+failed and the tonemap used the game's render-size SceneInfo. RE2/RE3's 512 bytes were fine. 0.1.1:
+the copy is 768 bytes, bound whole.
+
+Lua probe: via.render.RenderConfig exists in the TDB (get/set_ImageQualityRate, System.Single) but
+`sdk.get_native_singleton("via.render.RenderConfig")` is **null** in RE7's build, so every call
+went to nothing. 0.1.1's probe looks for another way to the object (managed singleton, Renderer,
+app option types).
