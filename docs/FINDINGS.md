@@ -101,3 +101,12 @@ Lua probe: via.render.RenderConfig exists in the TDB (get/set_ImageQualityRate, 
 `sdk.get_native_singleton("via.render.RenderConfig")` is **null** in RE7's build, so every call
 went to nothing. 0.1.1's probe looks for another way to the object (managed singleton, Renderer,
 app option types).
+
+## 0.1.1 test (2026-11-16): upscaling works
+
+Game slider at 0.5: DLSS 1920x1080 -> 3840x2160 (Performance, preset M), tonemap and grain at 4K,
+RCAS ran; "everything looked good" (user). The first 256 frames after the load counted 1 jitter
+position (0.1.0 counted 32 at the same size); 0.1.2 measures again when it counts 1.
+
+Probe: via.render.Renderer is a native singleton and has get/set_ImageQualityRate (and
+get_RenderConfig); no sdk.get_tdb in this REFramework build. 0.1.2's script uses the Renderer.

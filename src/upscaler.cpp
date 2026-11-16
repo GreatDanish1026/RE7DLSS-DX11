@@ -752,9 +752,16 @@ bool OnTaa(command_list* cl, const GameState& g) {
             const int qx = static_cast<int>(std::lround(jitterX * 1000)), qy = static_cast<int>(std::lround(jitterY * 1000));
             ++seen[(static_cast<uint64_t>(static_cast<uint32_t>(qx)) << 32) | static_cast<uint32_t>(qy)];
             if (++frames == 256) {
-                done = true;
-                Log("jitter at %ux%u: %zu different positions in 256 frames (DLSS suggests %.0f at this scale)", renderW,
-                    renderH, seen.size(), 8.0f / (g_renderScale.load() * g_renderScale.load()));
+                // One position (no jitter, e.g. the frames after a load: 0.1.1's first log) is measured
+                // again; logged once.
+                static bool loggedStill = false;
+                const bool still = seen.size() <= 1;
+                if (!still || !loggedStill)
+                    Log("jitter at %ux%u: %zu different positions in 256 frames (DLSS suggests %.0f at this scale)%s",
+                        renderW, renderH, seen.size(), 8.0f / (g_renderScale.load() * g_renderScale.load()),
+                        still ? "; measuring again" : "");
+                if (still) loggedStill = true, seen.clear(), frames = 0;
+                else done = true;
             }
         }
     }
