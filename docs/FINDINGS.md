@@ -7,7 +7,7 @@ Goal: DLSS (and FSR) in place of the game's TAA, as RE2DLSS-DX11 and RE3DLSS-DX1
 DX11 build is an older RE Engine (TDB 49) than RE2/RE3's (TDB 66/67), so its shader ids, registers
 and SceneInfo layout have to be found again before the upscaler is pointed at it.
 
-REFramework for this build: nightly 01366, asset `RE7_TDB49.zip` (not downloaded yet).
+REFramework for this build: nightly 01366, asset `RE7_TDB49.zip` (downloaded 2026-11-16 into third_partyeframework).
 
 ## 0.0.1 probe
 
