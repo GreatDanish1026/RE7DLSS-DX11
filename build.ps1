@@ -95,7 +95,7 @@ if ($Package) {
     @(
         "name=$name - DLSS and FSR for Resident Evil 7 (DirectX 11 version)",
         "version=v$version",
-        "description=For the DirectX 11 (non-ray-tracing) version of Resident Evil 7 (Steam beta branch dx11_non-rt). Replaces the game's TAA with NVIDIA DLSS or AMD FSR 3.1 / FSR 4: native anti-aliasing, or upscaling with the game's bloom, tonemapping (RenoDX HDR works), sharpening and HUD at full resolution; sharper textures and a sharpening slider. Includes REFramework (TDB49 build) for the render resolution dropdown. DLSS needs an NVIDIA RTX card, FSR any Direct3D 12 capable card; ReShade 6.8+ with add-on support. Settings: ReShade overlay (Home), Add-ons tab, $name; F9 switches upscaling on and off.",
+        "description=For the DirectX 11 (non-ray-tracing) version of Resident Evil 7 (Steam beta branch dx11_non-rt). Replaces the game's TAA with NVIDIA DLSS or AMD FSR 3.1 / FSR 4: native anti-aliasing, or upscaling with the game's bloom, tonemapping, lens effects and film grain at full resolution; sharper textures and a sharpening slider. Includes REFramework (TDB49 build) for the render resolution dropdown. DLSS needs an NVIDIA RTX card, FSR any Direct3D 12 capable card; ReShade 6.8+ with add-on support. Settings: ReShade overlay (Home), Add-ons tab, $name; F9 switches upscaling on and off.",
         "author=Scott Dinwiddie"
     ) | Set-Content "$mod\modinfo.ini" -Encoding ascii
 

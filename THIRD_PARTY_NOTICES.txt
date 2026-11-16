@@ -61,11 +61,11 @@ This software contains source code provided by NVIDIA Corporation.
 
 
 
-The RE7DLSS release zip redistributes NVIDIA's signed DLSS runtimes,
+The RE7DLSS-DX11 release zip redistributes NVIDIA's signed DLSS runtimes,
 nvngx_dlss.dll and nvngx_dlssd.dll (Ray Reconstruction) 310.9.16 (from bin\x64 of
 NVIDIA's Streamline SDK 2.14.16
 release), unmodified, under the NVIDIA RTX SDKs license (NVIDIA-DLSS-LICENSE.txt
-in the zip's RE7DLSS-licenses folder). It is not part of the source
+in the zip's RE7DLSS-DX11-licenses folder). It is not part of the source
 repository.
 
 ----------------------------------------------------------------------------
@@ -94,10 +94,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-The RE7DLSS release zip redistributes AMD-signed runtime files from
+The RE7DLSS-DX11 release zip redistributes AMD-signed runtime files from
 that same release, unmodified: amd_fidelityfx_loader_dx12.dll,
 amd_fidelityfx_upscaler_dx12.dll and amd_fidelityfx_framegeneration_dx12.dll,
-under AMD's binary licence (RE7DLSS-licenses/AMD-FSR-LICENSE.txt in the zip). They are
+under AMD's binary licence (RE7DLSS-DX11-licenses/AMD-FSR-LICENSE.txt in the zip). They are
 not part of the source repository.
 
 ----------------------------------------------------------------------------

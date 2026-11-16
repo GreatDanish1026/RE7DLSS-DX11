@@ -118,3 +118,9 @@ every step (applied within a frame or two): DLAA 3840x2160 (K), Quality 2561x144
 positions), Balanced 2227x1252 (K, 24), Performance 1920x1080 (M, 32), each jitter count matching
 what DLSS suggests. FSR 3.1.6 through the D3D12 bridge at 50%, 58%, 67% and native, then back to
 DLSS DLAA, no errors.
+
+## 1.0.0 (2026-11-16)
+
+0.1.2 as tested. README rewritten for RE7 (film grain in place of the game's sharpening, no effect
+mask, NVIDIA app override note, RenoDX and FSR 4 on Radeon untested); package
+RE7DLSS-DX11-1.0.0.zip (78,493,611 bytes, 14 files, REFramework TDB49 dinput8.dll).

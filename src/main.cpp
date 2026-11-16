@@ -1,6 +1,6 @@
 // RE7DLSS-DX11: a ReShade add-on for Resident Evil 7's DirectX 11 build (Steam beta branch
-// dx11_non-rt) that will replace the game's TAA with DLSS or FSR. 0.0.x is the probe: the frame
-// capture tool that finds the passes (docs/FINDINGS.md).
+// dx11_non-rt) that replaces the game's TAA with DLSS or FSR (upscaler.cpp). This file is the
+// binding tracking it relies on and the frame capture tool that found the passes (docs/FINDINGS.md).
 //
 // Frame capture (overlay button, or F10 with ReShade.ini [RE7DLSS-DX11] CaptureHotkey=1) records
 // two frames to RE7DLSS-DX11-frame-N.txt next to re7.exe:

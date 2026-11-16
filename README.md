@@ -7,7 +7,7 @@ branch `dx11_non-rt`, without ray tracing) that replaces the game's TAA with **N
 - **Native anti-aliasing**: at 100% render resolution, DLSS (DLAA) or FSR anti-alias at native
   resolution.
 - **Upscaling**: below 100%, DLSS or FSR upscale to your screen resolution, and the game's bloom,
-  tonemapping (RenoDX HDR works), sharpening and HUD run at full resolution.
+  tonemapping, lens effects and film grain run at full resolution.
 - **Render resolution dropdown**: Native, Quality (67%), Balanced (58%), Performance (50%), or the
   game's own Image Quality slider. The bundled REFramework sets it.
 - **Upscaler**: Auto (DLSS on NVIDIA RTX cards, FSR on others), DLSS, or FSR. AMD's FSR runtime is
@@ -15,10 +15,11 @@ branch `dx11_non-rt`, without ray tracing) that replaces the game's TAA with **N
   between the two; on Radeon cards that support it, AMD's runtime picks FSR 4.
 - **DLSS model**: Automatic (K at Native, Quality and Balanced, M at Performance), or K, J, L or M.
   Changing the render resolution in the overlay sets it back to Automatic.
-- **Clean upscaling at low resolutions**: the game's motion vectors include each frame's camera
-  jitter; the add-on takes it out before DLSS and FSR get them (with it, DLSS left soft striped
-  patches on still faces at Performance), and gives the game a longer jitter sequence while
-  upscaling (32 positions at Performance instead of the game's 16), as DLSS asks for.
+- **Clean upscaling at low resolutions**: the RE Engine's motion vectors include each frame's camera
+  jitter; the add-on takes it out before DLSS and FSR get them (in Resident Evil 3's DirectX 11
+  version, the jitter left soft striped patches on still faces at Performance). It also gives the
+  game a longer jitter sequence while upscaling (32 positions at Performance instead of the game's
+  16), as DLSS asks for.
 - **Sharpening** slider (off by default): AMD's contrast-adaptive sharpening (RCAS) after DLSS, or
   FSR's own for FSR.
 - **Sharper textures** (on by default): when upscaling, textures are sampled as at your screen
@@ -56,15 +57,18 @@ ReShade overlay (Home key), Add-ons tab, **RE7DLSS-DX11**; saved in `ReShade.ini
 - **Settings**: upscaling on/off (F9), upscaler, render resolution, DLSS model, sharpening.
 - **Status**: what's running (upscaler, render size, native or upscaling), or why it isn't.
 - **Advanced**: upscaling below 100% (off: the upscaler anti-aliases at the render resolution and
-  the game stretches the result), the game's sharpening at full resolution, the game's effect mask,
-  the longer jitter sequence, sharper textures, the game's exposure for DLSS (off by default: in
-  RE2 it made characters' dithered fade look see-through), and testing switches and a frame capture
-  tool for development.
+  the game stretches the result), the game's film grain at full resolution, the longer jitter
+  sequence, sharper textures, the game's exposure for DLSS (off by default: in Resident Evil 2 it
+  made characters' dithered fade look see-through), and testing switches and a frame capture tool
+  for development.
 
 ## Notes
 
 - Not supported: frame generation, and Ray Reconstruction (this version of the game has no ray
   tracing).
+- If the NVIDIA app's DLSS override (model preset) is set, the driver uses that model whatever the
+  DLSS model setting here says.
+- Not tested yet: RenoDX HDR, and FSR 4 on Radeon cards.
 - `RE7DLSS-DX11.log` next to `re7.exe` records what the add-on found and did.
 
 ## Licence
