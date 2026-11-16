@@ -9,6 +9,7 @@
 local rc_type = sdk.find_type_definition("via.render.RenderConfig")
 local original = nil  -- the game's value before the first override
 local frame = 0
+local last_set = nil  -- the scale set while the getter can't be read
 
 local function get_rate(rc)
     return sdk.call_native_func(rc, rc_type, "get_ImageQualityRate")
@@ -30,8 +31,15 @@ re.on_frame(function()
         if not rc then return end
         local want = tonumber(fs.read("RE7DLSS-DX11_mode.txt") or "") or 0
         local cur = get_rate(rc)
+        -- TDB49 build (2026-11-16): the getter returned 0 here; never take 0 as the game's value.
+        local known = type(cur) == "number" and cur > 0.01
         if want > 0 then
-            if original == nil then original = cur end
+            if original == nil and known then original = cur end
+            if not known then
+                if last_set ~= want then set_rate(rc, want); last_set = want end
+                fs.write("RE7DLSS-DX11_status.txt", string.format("%.4f %d set", want, frame))
+                return
+            end
             if math.abs(cur - want) > 0.001 then
                 set_rate(rc, want)
                 cur = get_rate(rc)
@@ -41,6 +49,7 @@ re.on_frame(function()
             original = nil
             cur = get_rate(rc)
         end
+        last_set = nil
         fs.write("RE7DLSS-DX11_status.txt", string.format("%.4f %d", cur or -1, frame))
     end)
     if not ok then fs.write("RE7DLSS-DX11_status.txt", "error " .. tostring(err)) end

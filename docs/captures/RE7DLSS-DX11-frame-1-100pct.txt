@@ -1,0 +1,2295 @@
+==== capture start (deferred work recorded before this point is missing)
+---- immediate context C1, 1145 events
+  render targets: null null null null null null null null
+  clear #3ea46 tex 3840x2160 rgba16f to 0 0 0 1
+  DISPATCH csa08068f2 35 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #a643a buf 917504
+      t2 = #38276 buf 859056 as r32_typeless
+      t3 = #385ba tex 512x512 rgba8unorm
+      t4 = #3aece tex 512x256 rgba16f
+      t5 = #3af52 tex 512x256 rgba16f
+      u0 = #3d2fe buf 390480 as r32_typeless
+      b0 = cb #3d172 buf 16 +0
+      b1 = cb #44cc2 buf 32 +0
+      b2 = cb #3d3ae buf 128 +0
+  DISPATCH csa08068f2 38 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #a643a buf 917504
+      t2 = #3850a buf 940632 as r32_typeless
+      t3 = #38746 tex 512x512 rgba8unorm
+      t4 = #3aece tex 512x256 rgba16f
+      t5 = #3af52 tex 512x256 rgba16f
+      u0 = #3d48a buf 427560 as r32_typeless
+      b0 = cb #f27b6 buf 16 +0
+      b1 = cb #44cee buf 32 +0
+      b2 = cb #3d53a buf 128 +0
+  DISPATCH cs65d7080b 6 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #e28ee buf 57464 as r32_typeless
+      u0 = #0f6de buf 15672 as r32_typeless
+      b0 = cb #f34e2 buf 144 +0
+      b1 = cb #0f70a buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #6f216 buf 25872 as r32_typeless
+      u0 = #ddfda buf 7056 as r32_typeless
+      b0 = cb #f3412 buf 144 +0
+      b1 = cb #ddf56 buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #382a2 buf 25872 as r32_typeless
+      u0 = #f2472 buf 7056 as r32_typeless
+      b0 = cb #f338e buf 144 +0
+      b1 = cb #f24ca buf 32 +0
+  DISPATCH cs65d7080b 25 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #f262a buf 32 +0
+  DISPATCH cs65d7080b 29 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #f2656 buf 32 +0
+  DISPATCH cs65d7080b 9 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #dda76 buf 32 +0
+  DISPATCH cs65d7080b 9 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #ddbaa buf 32 +0
+  DISPATCH cs65d7080b 33 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #dddba buf 32 +0
+  DISPATCH cs65d7080b 32 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #dda1e buf 32 +0
+  DISPATCH cs65d7080b 5 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddd62 buf 32 +0
+  DISPATCH cs65d7080b 2 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddafa buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddcde buf 32 +0
+  DISPATCH csb20188e3 33 x 1 x 1
+      t0 = #3d2fe buf 390480 as r32_typeless
+      t1 = #3d432 buf 221376 as r32_typeless
+      u0 = #3d1f6 buf 117144 as r32_typeless
+      b0 = cb #3d3da buf 32 +0
+  DISPATCH csb20188e3 36 x 1 x 1
+      t0 = #3d48a buf 427560 as r32_typeless
+      t1 = #3d592 buf 239112 as r32_typeless
+      u0 = #3d4e2 buf 128268 as r32_typeless
+      b0 = cb #3d382 buf 32 +0
+  DISPATCH cse4ddbcd7 39 x 1 x 1
+      t0 = #3d1f6 buf 117144 as r32_typeless
+      t1 = #3d50e buf 39048
+      u0 = #3d2fe buf 390480 as r32_typeless
+      b0 = cb #3d3da buf 32 +0
+  DISPATCH cse4ddbcd7 42 x 1 x 1
+      t0 = #3d4e2 buf 128268 as r32_typeless
+      t1 = #3d2d2 buf 42756
+      u0 = #3d48a buf 427560 as r32_typeless
+      b0 = cb #3d382 buf 32 +0
+  DISPATCH cs6c36b85e 20 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #e28ee buf 57464 as r32_typeless
+      t2 = #0f57e buf 29976 as r32_typeless
+      t3 = #0f62e buf 9992
+      u0 = #0f812 buf 9992
+      b0 = cb #f34e2 buf 144 +0
+      b1 = cb #0f552 buf 80 +0
+  DISPATCH cs6c36b85e 8 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #6f216 buf 25872 as r32_typeless
+      t2 = #dd9e6 buf 11208 as r32_typeless
+      t3 = #dd802 buf 3736
+      u0 = #dd962 buf 3736
+      b0 = cb #f3412 buf 144 +0
+      b1 = cb #dd8de buf 80 +0
+  DISPATCH cs6c36b85e 8 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #382a2 buf 25872 as r32_typeless
+      t2 = #de13a buf 11208 as r32_typeless
+      t3 = #de406 buf 3736
+      u0 = #de4b6 buf 3736
+      b0 = cb #f338e buf 144 +0
+      b1 = cb #de05e buf 80 +0
+  DISPATCH csb2247180 11 x 1 x 1
+      u0 = #0f8ee buf 5224
+  DISPATCH csb2247180 11 x 1 x 1
+      u0 = #0f736 buf 5224
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #dd82e buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #dd85a buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #de4e2 buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #de432 buf 2352
+  DISPATCH cs93f82983 20 x 1 x 1
+      t0 = #0f57e buf 29976 as r32_typeless
+      t1 = #0f812 buf 9992
+      u0 = #0f8ee buf 5224
+      u1 = #0f736 buf 5224
+      b0 = cb #0f18a buf 16 +0
+  DISPATCH cs93f82983 8 x 1 x 1
+      t0 = #dd9e6 buf 11208 as r32_typeless
+      t1 = #dd962 buf 3736
+      u0 = #dd82e buf 2352
+      u1 = #dd85a buf 2352
+      b0 = cb #dd752 buf 16 +0
+  DISPATCH cs93f82983 8 x 1 x 1
+      t0 = #de13a buf 11208 as r32_typeless
+      t1 = #de4b6 buf 3736
+      u0 = #de4e2 buf 2352
+      u1 = #de432 buf 2352
+      b0 = cb #de0b6 buf 16 +0
+  DISPATCH csb94ea76a 11 x 1 x 1
+      t0 = #0f8c2 buf 31344
+      u0 = #0f8ee buf 5224
+      u1 = #0f736 buf 5224
+      b0 = cb #0f2be buf 16 +0
+  DISPATCH csb94ea76a 5 x 1 x 1
+      t0 = #dd64a buf 14112
+      u0 = #dd82e buf 2352
+      u1 = #dd85a buf 2352
+      b0 = cb #dd7d6 buf 16 +0
+  DISPATCH csb94ea76a 5 x 1 x 1
+      t0 = #de356 buf 14112
+      u0 = #de4e2 buf 2352
+      u1 = #de432 buf 2352
+      b0 = cb #de006 buf 16 +0
+  render targets: #e270a tex 512x512 r16f
+  draw x1
+  render targets: #3845a tex 512x512 r16f
+  draw x1
+  render targets: #37f06 tex 512x512 r16f
+  draw x1
+  clear #384de tex 200x228 rgba8unorm to 0 0 0 0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  clear #3e51e tex 3840x2160 r11g11b10f as r11g11b10f to 0 0 0 0
+  render targets: null null null null null null null null
+  DISPATCH csc2f4f566 1024 x 1 x 1
+      u0 = #a6306 buf 1310720 as r32_typeless
+  DISPATCH cs6784fc5b 120 x 68 x 1
+      t0 = #409ba tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #dbf2a tex 128x64 fmt72
+      u0 = #c5546 buf 4096 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #c5572 buf 32 +0
+  DISPATCH cs49a37981 1 x 1 x 1
+      t0 = #c5546 buf 4096 as r32_typeless
+      u0 = #c559e buf 36 as r32_typeless
+      u1 = #a61fe buf 36 as r32_typeless
+      b0 = cb #c5572 buf 32 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  draw x1
+  render targets: #384de tex 200x228 rgba8unorm
+  draw x1
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: null null null null null null null null
+  DISPATCH csc2eb929a 8 x 256 x 1
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x12
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x3
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x15
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x3
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x2
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: null null null null null null null null
+  DISPATCH csdde160c9 32 x 16 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip1
+  DISPATCH csdde160c9 16 x 8 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip1
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip2
+  DISPATCH csdde160c9 8 x 4 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip2
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip3
+  DISPATCH csdde160c9 4 x 2 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip3
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip4
+  DISPATCH csdde160c9 2 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip4
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip5
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip5
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip6
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip6
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip7
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip7
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip8
+  DISPATCH cs0e5883d6 2 x 1 x 1
+      t0 = #3f3ba buf 131072
+      u0 = #4038a buf 20 as r32_typeless
+      u1 = #3f0fa buf 16384 as r32_typeless
+      u2 = #40122 buf 16384 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+  render targets: depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  copy #3f0fa buf 16384 -> #3f4ee buf 16384
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x25
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  copy #3ebfe tex 3840x2160 rgb10a2unorm -> #3ee92 tex 3840x2160 rgb10a2unorm
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: null null null null null null null null
+  DISPATCH csc2f4f566 1024 x 1 x 1
+      u0 = #a6306 buf 1310720 as r32_typeless
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  FULLSCREEN ps66b8d004 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+      t0 = #f92a2 tex 1024x1024 fmt95
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #3fc6e buf 32 +0
+  render targets: null null null null null null null null
+  DISPATCH cs56cb4e09 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      u0 = #3ea1a tex 3840x2160 rgba16snorm
+      u1 = #3e5a2 tex 1920x1080 r32f mips8 as r32f
+      u2 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      u3 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      u4 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      u5 = #3d7e2 tex 240x135 rg32f
+      b0 = cb #3696a buf 608 +0
+  DISPATCH csdc2df98b 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      u0 = #3d8ea tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+  DISPATCH cs4e1e0adf 8 x 5 x 1
+      t0 = #3d7e2 tex 240x135 rg32f
+      u0 = #3db26 tex 120x68 rg32f
+      b0 = cb #40d2a buf 16 +0
+  DISPATCH csd7e16d1a 120 x 68 x 1
+      t0 = #3db26 tex 120x68 rg32f
+      u0 = #3da4a tex 120x68 r32uint
+      u1 = #3daa2 tex 120x68 r32uint x16
+      u2 = #40cfe buf 16711680 as r32_typeless
+      u3 = #40ca6 buf 4 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+      b2 = cb #a254a buf 16 +0
+      b3 = cb #a272e buf 16 +0
+  DISPATCH csc9f5b697 60 x 34 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      b0 = cb #40bf6 buf 16 +0
+  DISPATCH csc9f5b697 30 x 17 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      b0 = cb #40c22 buf 16 +0
+  DISPATCH csc9f5b697 15 x 9 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      b0 = cb #40e8a buf 16 +0
+  DISPATCH cs1cf8b786 8 x 5 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip4
+      b0 = cb #40d2a buf 16 +0
+  DISPATCH cs1cf8b786 4 x 3 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip4
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip5
+      b0 = cb #40eb6 buf 16 +0
+  DISPATCH cs1cf8b786 2 x 1 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip5
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip6
+      b0 = cb #40c7a buf 16 +0
+  DISPATCH csc9f5b697 1 x 1 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip6
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip7
+      b0 = cb #40ee2 buf 16 +0
+  DISPATCH cs0567a37b 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t2 = #40a96 tex 3840x2160 r32_typeless as r32f
+      t3 = #377fa buf 47438844 as r32_typeless
+      t4 = #37a8e buf 9210000
+      t5 = #a2836 buf 16777216 as r32_typeless
+      t6 = #92762 tex 512x512 r11g11b10f x128 mips5
+      t7 = #3fc42 tex 256x256 r11g11b10f x6 mips8
+      t8 = #3da4a tex 120x68 r32uint
+      t9 = #40cfe buf 16711680 as r32_typeless
+      u0 = #3dc02 tex 3840x2160 r32uint
+      u1 = #3ee3a tex 3840x2160 r32uint
+      u2 = #412aa tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+  render targets: #40936 tex 3840x2160 r32_typeless as r32f
+  FULLSCREEN ps8e010545 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40936 tex 3840x2160 r32_typeless as r32f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+  render targets: #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+  FULLSCREEN psbc4946c3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #4111e buf 32 +0
+  render targets: #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+  FULLSCREEN psbc4946c3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #411ce buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4111e buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #412d6 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41386 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4114a buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41176 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41436 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411a2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #413b2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411ce buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41302 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #410f2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4140a buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41462 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411fa buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4132e buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4109a buf 32 +0
+  render targets: #40752 tex 3840x2160 rg16f x16
+  FULLSCREEN ps3932250d vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40752 tex 3840x2160 rg16f x16
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      t1 = #4014e tex 960x540 r8unorm x16 as r8unorm
+  render targets: #4085a tex 3840x2160 rg16f x16
+  FULLSCREEN ps4d0f9f98 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #4085a tex 3840x2160 rg16f x16
+      t0 = #40752 tex 3840x2160 rg16f x16
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #404be buf 80 +0
+  render targets: #40a96 tex 3840x2160 r32_typeless as r32f
+  FULLSCREEN ps5958893a vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40a96 tex 3840x2160 r32_typeless as r32f
+      t0 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      t1 = #4085a tex 3840x2160 rg16f x16
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #404be buf 80 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps56cef943 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t2 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t3 = #927ba tex 512x1 r16f x64 as r16f
+      t4 = #3e652 tex 2048x2048 r32_typeless x64 as r32f
+      t5 = #3db26 tex 120x68 rg32f
+      t6 = #3daa2 tex 120x68 r32uint x16
+      t7 = #40cfe buf 16711680 as r32_typeless
+      t8 = #3dc02 tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+      b2 = cb #927e6 buf 128 +0
+      b3 = cb #a640e buf 208 +0
+  render targets: #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps8bbedf8d vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #3d8ea tex 3840x2160 r32uint
+      t2 = #a56aa buf 456
+      b0 = cb #3696a buf 608 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps5a5a6079 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t1 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t2 = #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+      t3 = #3d8ea tex 3840x2160 r32uint
+      t4 = #a56aa buf 456
+      b0 = cb #3696a buf 608 +0
+  render targets: null null null null null null null null
+  DISPATCH cse361a29c 1 x 1 x 1
+      u0 = #4106e buf 24 as r32_typeless
+  DISPATCH cs09f7ee6f 120 x 68 x 1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      u1 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f
+      u2 = #41042 buf 8294400 as r32_typeless
+      u3 = #40c4e buf 8294400 as r32_typeless
+      u4 = #4106e buf 24 as r32_typeless
+      b0 = cb #40b46 buf 16 +0
+  DISPATCH csdd664ac7 60 x 34 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip1
+  DISPATCH cs2eba6ef8 1 x 1 x 1
+      u0 = #41042 buf 8294400 as r32_typeless
+      u1 = #4106e buf 24 as r32_typeless
+  DISPATCH cs91062893 1 x 1 x 1
+      u0 = #40c4e buf 8294400 as r32_typeless
+      u1 = #4106e buf 24 as r32_typeless
+  DISPATCH csdd664ac7 30 x 17 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip1
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip2
+  DISPATCH csdd664ac7 15 x 9 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip2
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip3
+  DISPATCH csdd664ac7 8 x 5 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip3
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip4
+  DISPATCH csdd664ac7 4 x 3 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip4
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip5
+  DISPATCH csdd664ac7 2 x 1 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip5
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip6
+  DISPATCH csdd664ac7 1 x 1 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip6
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip7
+  DISPATCH cs0d2a1e73 indirect x1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #40c4e buf 8294400 as r32_typeless
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #40d56 buf 32 +0
+  DISPATCH csef4423b1 indirect x1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #41042 buf 8294400 as r32_typeless
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #40d56 buf 32 +0
+  DISPATCH csaf18c6e2 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t2 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t3 = #dbbe6 tex 256x256 fmt95
+      t4 = #3ee3a tex 3840x2160 r32uint
+      t5 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t6 = #413de tex 3840x2160 r32uint
+      t7 = #3d8be tex 1920x1080 rgba16unorm
+      t8 = #40b72 tex 1920x1080 r11g11b10f mips8
+      u0 = #3dc02 tex 3840x2160 r32uint
+      u1 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #5f376 buf 32 +0
+      b2 = cb #40b46 buf 16 +0
+      b3 = cb #40f0e buf 192 +0
+  copy #3dc02 tex 3840x2160 r32uint -> #413de tex 3840x2160 r32uint
+  clear #40e06 tex 1920x1080 rgba16f to 0 0 0 0
+  render targets: #40e06 tex 1920x1080 rgba16f
+  FULLSCREEN ps05177c3c vsbeee7b09 draw 1 verts viewport 1920x1080 at 0,0 -> #40e06 tex 1920x1080 rgba16f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #927ba tex 512x1 r16f x64 as r16f
+      t2 = #9262e buf 40960
+      t3 = #3e652 tex 2048x2048 r32_typeless x64 as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #3fa9a buf 384 +0
+  render targets: #40dda tex 3840x1080 rgba16f
+  FULLSCREEN psda2d37dc vs612ddc6c draw 3 verts viewport 3840x1080 at 0,0 -> #40dda tex 3840x1080 rgba16f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #40e06 tex 1920x1080 rgba16f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #c57da buf 16 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  FULLSCREEN psffe10a4a vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+      t0 = #40dda tex 3840x1080 rgba16f
+      b0 = cb #c57da buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f as r11g11b10f
+  FULLSCREEN psc512f974 vs5e8dde5a draw 4 indices viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #a6122 buf 48 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN psbeedaaab vs45c9c59d draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #409ba tex 3840x2160 r11g11b10f as r11g11b10f
+      t2 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #a6282 buf 256 +0
+  copy #3ed32 tex 3840x2160 r11g11b10f -> #409ba tex 3840x2160 r11g11b10f
+  render targets: #3ff3e tex 960x540 r11g11b10f
+  FULLSCREEN ps41d730b1 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #3ff3e tex 960x540 r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #4090a tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4090a tex 960x540 r11g11b10f
+      t0 = #3ff3e tex 960x540 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #3ff3e tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #3ff3e tex 960x540 r11g11b10f
+      t0 = #4090a tex 960x540 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #4090a tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4090a tex 960x540 r11g11b10f
+      t0 = #3ff3e tex 960x540 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f
+      t0 = #4090a tex 960x540 r11g11b10f
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #3eb7a tex 480x270 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #3eb7a tex 480x270 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #406a2 tex 240x135 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #406a2 tex 240x135 r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #406a2 tex 240x135 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #406a2 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #406a2 tex 240x135 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #406a2 tex 240x135 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #4082e tex 120x67 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #4082e tex 120x67 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4082e tex 120x67 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #4082e tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #4082e tex 120x67 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4082e tex 120x67 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #4064a tex 60x33 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4064a tex 60x33 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+  render targets: #4056e tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4056e tex 60x33 r11g11b10f
+      t0 = #4064a tex 60x33 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #4064a tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4064a tex 60x33 r11g11b10f
+      t0 = #4056e tex 60x33 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #4056e tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4056e tex 60x33 r11g11b10f
+      t0 = #4064a tex 60x33 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4056e tex 60x33 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+      b0 = cb #c593a buf 32 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps180ea9ae vs45c9c59d draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #3769a tex 32x32 rgba8srgb x32
+      t2 = #3769a tex 32x32 rgba8srgb x32
+      t3 = #dbcc2 tex 32x32 rgba8srgb x32
+      t4 = #364f2 tex 1209x680 rgba8srgb
+      t5 = #36392 tex 1209x680 rgba8unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #a6282 buf 256 +0
+      b2 = cb #c517e buf 16 +0
+      b3 = cb #c51d6 buf 16 +0
+      b4 = cb #c55ca buf 32 +0
+      b5 = cb #c56a6 buf 80 +0
+      b6 = cb #6df86 buf 48 +0
+      b7 = cb #c567a buf 32 +0
+      b8 = cb #6dc16 buf 16 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps0aad5957 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #c58e2 buf 48 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps88a437a0 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  render targets: #3ea46 tex 3840x2160 rgba16f
+  FULLSCREEN ps5d280918 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ea46 tex 3840x2160 rgba16f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #5f416 buf 48 +0
+  render targets: null null null null null null null null
+==== PRESENT (back buffer #3ea46 tex 3840x2160 rgba16f), 1 more
+---- immediate context C1, 1145 events
+  render targets: null null null null null null null null
+  clear #3ea46 tex 3840x2160 rgba16f to 0 0 0 1
+  DISPATCH csa08068f2 35 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #a643a buf 917504
+      t2 = #38276 buf 859056 as r32_typeless
+      t3 = #385ba tex 512x512 rgba8unorm
+      t4 = #3aece tex 512x256 rgba16f
+      t5 = #3af52 tex 512x256 rgba16f
+      u0 = #3d2fe buf 390480 as r32_typeless
+      b0 = cb #3d172 buf 16 +0
+      b1 = cb #34b0e buf 32 +0
+      b2 = cb #3d3ae buf 128 +0
+  DISPATCH csa08068f2 38 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #a643a buf 917504
+      t2 = #3850a buf 940632 as r32_typeless
+      t3 = #38746 tex 512x512 rgba8unorm
+      t4 = #3aece tex 512x256 rgba16f
+      t5 = #3af52 tex 512x256 rgba16f
+      u0 = #3d48a buf 427560 as r32_typeless
+      b0 = cb #f27b6 buf 16 +0
+      b1 = cb #34b66 buf 32 +0
+      b2 = cb #3d53a buf 128 +0
+  DISPATCH cs65d7080b 6 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #e28ee buf 57464 as r32_typeless
+      u0 = #0f6de buf 15672 as r32_typeless
+      b0 = cb #f34e2 buf 144 +0
+      b1 = cb #0f70a buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #6f216 buf 25872 as r32_typeless
+      u0 = #ddfda buf 7056 as r32_typeless
+      b0 = cb #f3412 buf 144 +0
+      b1 = cb #ddf56 buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #382a2 buf 25872 as r32_typeless
+      u0 = #f2472 buf 7056 as r32_typeless
+      b0 = cb #f338e buf 144 +0
+      b1 = cb #f24ca buf 32 +0
+  DISPATCH cs65d7080b 25 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #f262a buf 32 +0
+  DISPATCH cs65d7080b 29 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #f2656 buf 32 +0
+  DISPATCH cs65d7080b 9 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #dda76 buf 32 +0
+  DISPATCH cs65d7080b 9 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #77cea buf 1349832 as r32_typeless
+      u0 = #f249e buf 212460 as r32_typeless
+      b0 = cb #3fda2 buf 144 +0
+      b1 = cb #ddbaa buf 32 +0
+  DISPATCH cs65d7080b 33 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #dddba buf 32 +0
+  DISPATCH cs65d7080b 32 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #dda1e buf 32 +0
+  DISPATCH cs65d7080b 5 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddd62 buf 32 +0
+  DISPATCH cs65d7080b 2 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddafa buf 32 +0
+  DISPATCH cs65d7080b 3 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #8bf4a buf 1385164 as r32_typeless
+      u0 = #ddb52 buf 220440 as r32_typeless
+      b0 = cb #3fdce buf 144 +0
+      b1 = cb #ddcde buf 32 +0
+  DISPATCH csb20188e3 33 x 1 x 1
+      t0 = #3d2fe buf 390480 as r32_typeless
+      t1 = #3d432 buf 221376 as r32_typeless
+      u0 = #3d1f6 buf 117144 as r32_typeless
+      b0 = cb #3d3da buf 32 +0
+  DISPATCH csb20188e3 36 x 1 x 1
+      t0 = #3d48a buf 427560 as r32_typeless
+      t1 = #3d592 buf 239112 as r32_typeless
+      u0 = #3d4e2 buf 128268 as r32_typeless
+      b0 = cb #3d382 buf 32 +0
+  DISPATCH cse4ddbcd7 39 x 1 x 1
+      t0 = #3d1f6 buf 117144 as r32_typeless
+      t1 = #3d50e buf 39048
+      u0 = #3d2fe buf 390480 as r32_typeless
+      b0 = cb #3d3da buf 32 +0
+  DISPATCH cse4ddbcd7 42 x 1 x 1
+      t0 = #3d4e2 buf 128268 as r32_typeless
+      t1 = #3d2d2 buf 42756
+      u0 = #3d48a buf 427560 as r32_typeless
+      b0 = cb #3d382 buf 32 +0
+  DISPATCH cs6c36b85e 20 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #e28ee buf 57464 as r32_typeless
+      t2 = #0f57e buf 29976 as r32_typeless
+      t3 = #0f62e buf 9992
+      u0 = #0f812 buf 9992
+      b0 = cb #f34e2 buf 144 +0
+      b1 = cb #0f552 buf 80 +0
+  DISPATCH cs6c36b85e 8 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #6f216 buf 25872 as r32_typeless
+      t2 = #dd9e6 buf 11208 as r32_typeless
+      t3 = #dd802 buf 3736
+      u0 = #dd962 buf 3736
+      b0 = cb #f3412 buf 144 +0
+      b1 = cb #dd8de buf 80 +0
+  DISPATCH cs6c36b85e 8 x 1 x 1
+      t0 = #92062 buf 25165824
+      t1 = #382a2 buf 25872 as r32_typeless
+      t2 = #de13a buf 11208 as r32_typeless
+      t3 = #de406 buf 3736
+      u0 = #de4b6 buf 3736
+      b0 = cb #f338e buf 144 +0
+      b1 = cb #de05e buf 80 +0
+  DISPATCH csb2247180 11 x 1 x 1
+      u0 = #0f8ee buf 5224
+  DISPATCH csb2247180 11 x 1 x 1
+      u0 = #0f736 buf 5224
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #dd82e buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #dd85a buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #de4e2 buf 2352
+  DISPATCH csb2247180 5 x 1 x 1
+      u0 = #de432 buf 2352
+  DISPATCH cs93f82983 20 x 1 x 1
+      t0 = #0f57e buf 29976 as r32_typeless
+      t1 = #0f812 buf 9992
+      u0 = #0f8ee buf 5224
+      u1 = #0f736 buf 5224
+      b0 = cb #0f18a buf 16 +0
+  DISPATCH cs93f82983 8 x 1 x 1
+      t0 = #dd9e6 buf 11208 as r32_typeless
+      t1 = #dd962 buf 3736
+      u0 = #dd82e buf 2352
+      u1 = #dd85a buf 2352
+      b0 = cb #dd752 buf 16 +0
+  DISPATCH cs93f82983 8 x 1 x 1
+      t0 = #de13a buf 11208 as r32_typeless
+      t1 = #de4b6 buf 3736
+      u0 = #de4e2 buf 2352
+      u1 = #de432 buf 2352
+      b0 = cb #de0b6 buf 16 +0
+  DISPATCH csb94ea76a 11 x 1 x 1
+      t0 = #0f8c2 buf 31344
+      u0 = #0f8ee buf 5224
+      u1 = #0f736 buf 5224
+      b0 = cb #0f2be buf 16 +0
+  DISPATCH csb94ea76a 5 x 1 x 1
+      t0 = #dd64a buf 14112
+      u0 = #dd82e buf 2352
+      u1 = #dd85a buf 2352
+      b0 = cb #dd7d6 buf 16 +0
+  DISPATCH csb94ea76a 5 x 1 x 1
+      t0 = #de356 buf 14112
+      u0 = #de4e2 buf 2352
+      u1 = #de432 buf 2352
+      b0 = cb #de006 buf 16 +0
+  render targets: #e270a tex 512x512 r16f
+  draw x1
+  render targets: #3845a tex 512x512 r16f
+  draw x1
+  render targets: #37f06 tex 512x512 r16f
+  draw x1
+  clear #384de tex 200x228 rgba8unorm to 0 0 0 0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x25
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  copy region #3e49a tex 2048x2048 r32_typeless x64 -> #3e652 tex 2048x2048 r32_typeless x64
+  render targets: depth #3e652 tex 2048x2048 r32_typeless x64 as d32f
+  draw x1
+  clear #3e51e tex 3840x2160 r11g11b10f as r11g11b10f to 0 0 0 0
+  render targets: null null null null null null null null
+  DISPATCH csc2f4f566 1024 x 1 x 1
+      u0 = #a6306 buf 1310720 as r32_typeless
+  DISPATCH cs6784fc5b 120 x 68 x 1
+      t0 = #409ba tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #dbf2a tex 128x64 fmt72
+      u0 = #c5546 buf 4096 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #c5572 buf 32 +0
+  DISPATCH cs49a37981 1 x 1 x 1
+      t0 = #c5546 buf 4096 as r32_typeless
+      u0 = #c559e buf 36 as r32_typeless
+      u1 = #a61fe buf 36 as r32_typeless
+      b0 = cb #c5572 buf 32 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  draw x1
+  render targets: #384de tex 200x228 rgba8unorm
+  draw x1
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  clear #deb56 tex 200x228 fmt65 to 0 0 0 0
+  render targets: #deb56 tex 200x228 fmt65
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #deb56 tex 200x228 fmt65
+      t0 = #dbd1a tex 8x8 fmt72
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps0ddd0959 vs00a8c185 draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #deb56 tex 200x228 fmt65
+      t1 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: #384de tex 200x228 rgba8unorm
+  FULLSCREEN ps840949e1 vs4a4cbbdf draw 5 indices viewport 200x228 at 0,0 -> #384de tex 200x228 rgba8unorm
+      t0 = #d5042 tex 1024x512 fmt99
+      b0 = cb #a614e buf 208 +0
+  render targets: null null null null null null null null
+  DISPATCH csc2eb929a 8 x 256 x 1
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x15
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x12
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x3
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x2
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x3
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x9
+  render targets: #3eeea tex 512x256 r16f mips9 as r16f depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  render targets: null null null null null null null null
+  DISPATCH csdde160c9 32 x 16 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip1
+  DISPATCH csdde160c9 16 x 8 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip1
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip2
+  DISPATCH csdde160c9 8 x 4 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip2
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip3
+  DISPATCH csdde160c9 4 x 2 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip3
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip4
+  DISPATCH csdde160c9 2 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip4
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip5
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip5
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip6
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip6
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip7
+  DISPATCH csdde160c9 1 x 1 x 1
+      t0 = #3eeea tex 512x256 r16f mips9 as r16f mip7
+      u0 = #3eeea tex 512x256 r16f mips9 as r16f mip8
+  DISPATCH cs0e5883d6 2 x 1 x 1
+      t0 = #3f3ba buf 131072
+      u0 = #4038a buf 20 as r32_typeless
+      u1 = #3f46a buf 16384 as r32_typeless
+      u2 = #40122 buf 16384 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+  render targets: depth #3eb4e tex 512x256 d32f as d32f
+  draw x1
+  copy #3f46a buf 16384 -> #3f496 buf 16384
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x25
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x2
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  copy #3ebfe tex 3840x2160 rgb10a2unorm -> #3ee92 tex 3840x2160 rgb10a2unorm
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: null null null null null null null null
+  DISPATCH csc2f4f566 1024 x 1 x 1
+      u0 = #a6306 buf 1310720 as r32_typeless
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  FULLSCREEN ps66b8d004 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+      t0 = #f92a2 tex 1024x1024 fmt95
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #3fc6e buf 32 +0
+  render targets: null null null null null null null null
+  DISPATCH cs56cb4e09 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      u0 = #3ea1a tex 3840x2160 rgba16snorm
+      u1 = #3e5a2 tex 1920x1080 r32f mips8 as r32f
+      u2 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      u3 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      u4 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      u5 = #3d7e2 tex 240x135 rg32f
+      b0 = cb #3696a buf 608 +0
+  DISPATCH csdc2df98b 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      u0 = #3d8ea tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+  DISPATCH cs4e1e0adf 8 x 5 x 1
+      t0 = #3d7e2 tex 240x135 rg32f
+      u0 = #3db26 tex 120x68 rg32f
+      b0 = cb #40d2a buf 16 +0
+  DISPATCH csd7e16d1a 120 x 68 x 1
+      t0 = #3db26 tex 120x68 rg32f
+      u0 = #3da4a tex 120x68 r32uint
+      u1 = #3daa2 tex 120x68 r32uint x16
+      u2 = #40cfe buf 16711680 as r32_typeless
+      u3 = #40ca6 buf 4 as r32_typeless
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+      b2 = cb #a254a buf 16 +0
+      b3 = cb #a272e buf 16 +0
+  DISPATCH csc9f5b697 60 x 34 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      b0 = cb #40bf6 buf 16 +0
+  DISPATCH csc9f5b697 30 x 17 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip1
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      b0 = cb #40c22 buf 16 +0
+  DISPATCH csc9f5b697 15 x 9 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip2
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      b0 = cb #40e8a buf 16 +0
+  DISPATCH cs1cf8b786 8 x 5 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip3
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip4
+      b0 = cb #40d2a buf 16 +0
+  DISPATCH cs1cf8b786 4 x 3 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip4
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip5
+      b0 = cb #40eb6 buf 16 +0
+  DISPATCH cs1cf8b786 2 x 1 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip5
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip6
+      b0 = cb #40c7a buf 16 +0
+  DISPATCH csc9f5b697 1 x 1 x 1
+      t0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip6
+      u0 = #3e5a2 tex 1920x1080 r32f mips8 as r32f mip7
+      b0 = cb #40ee2 buf 16 +0
+  DISPATCH cs0567a37b 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t2 = #40a96 tex 3840x2160 r32_typeless as r32f
+      t3 = #377fa buf 47438844 as r32_typeless
+      t4 = #37a8e buf 9210000
+      t5 = #a2836 buf 16777216 as r32_typeless
+      t6 = #92762 tex 512x512 r11g11b10f x128 mips5
+      t7 = #3fc42 tex 256x256 r11g11b10f x6 mips8
+      t8 = #3da4a tex 120x68 r32uint
+      t9 = #40cfe buf 16711680 as r32_typeless
+      u0 = #3dc02 tex 3840x2160 r32uint
+      u1 = #3ee3a tex 3840x2160 r32uint
+      u2 = #412aa tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+  render targets: #40936 tex 3840x2160 r32_typeless as r32f
+  FULLSCREEN ps8e010545 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40936 tex 3840x2160 r32_typeless as r32f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+  render targets: #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+  FULLSCREEN psbc4946c3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #4111e buf 32 +0
+  render targets: #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+  FULLSCREEN psbc4946c3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f #40a6a tex 960x540 r32f x16 as r32f
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #411ce buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4111e buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #412d6 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41386 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4114a buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41176 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41436 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411a2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #413b2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411ce buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41302 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #410f2 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4140a buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #41462 buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #411fa buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4132e buf 32 +0
+  render targets: #4014e tex 960x540 r8unorm x16 as r8unorm
+  FULLSCREEN ps35b238f3 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4014e tex 960x540 r8unorm x16 as r8unorm
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #40a6a tex 960x540 r32f x16 as r32f
+      b0 = cb #404be buf 80 +0
+      b1 = cb #4109a buf 32 +0
+  render targets: #40752 tex 3840x2160 rg16f x16
+  FULLSCREEN ps3932250d vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40752 tex 3840x2160 rg16f x16
+      t0 = #40936 tex 3840x2160 r32_typeless as r32f
+      t1 = #4014e tex 960x540 r8unorm x16 as r8unorm
+  render targets: #4085a tex 3840x2160 rg16f x16
+  FULLSCREEN ps4d0f9f98 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #4085a tex 3840x2160 rg16f x16
+      t0 = #40752 tex 3840x2160 rg16f x16
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #404be buf 80 +0
+  render targets: #40a96 tex 3840x2160 r32_typeless as r32f
+  FULLSCREEN ps5958893a vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #40a96 tex 3840x2160 r32_typeless as r32f
+      t0 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      t1 = #4085a tex 3840x2160 rg16f x16
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #404be buf 80 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps56cef943 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t2 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t3 = #927ba tex 512x1 r16f x64 as r16f
+      t4 = #3e652 tex 2048x2048 r32_typeless x64 as r32f
+      t5 = #3db26 tex 120x68 rg32f
+      t6 = #3daa2 tex 120x68 r32uint x16
+      t7 = #40cfe buf 16711680 as r32_typeless
+      t8 = #3dc02 tex 3840x2160 r32uint
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #9270a buf 47104 +0
+      b2 = cb #927e6 buf 128 +0
+      b3 = cb #a640e buf 208 +0
+  render targets: #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps8bbedf8d vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #3d8ea tex 3840x2160 r32uint
+      t2 = #a56aa buf 456
+      b0 = cb #3696a buf 608 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps5a5a6079 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t1 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t2 = #3dc5a tex 3840x2160 r11g11b10f as r11g11b10f
+      t3 = #3d8ea tex 3840x2160 r32uint
+      t4 = #a56aa buf 456
+      b0 = cb #3696a buf 608 +0
+  render targets: null null null null null null null null
+  DISPATCH cse361a29c 1 x 1 x 1
+      u0 = #4106e buf 24 as r32_typeless
+  DISPATCH cs09f7ee6f 120 x 68 x 1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      u1 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f
+      u2 = #41042 buf 8294400 as r32_typeless
+      u3 = #40c4e buf 8294400 as r32_typeless
+      u4 = #4106e buf 24 as r32_typeless
+      b0 = cb #40b46 buf 16 +0
+  DISPATCH csdd664ac7 60 x 34 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip1
+  DISPATCH cs2eba6ef8 1 x 1 x 1
+      u0 = #41042 buf 8294400 as r32_typeless
+      u1 = #4106e buf 24 as r32_typeless
+  DISPATCH cs91062893 1 x 1 x 1
+      u0 = #40c4e buf 8294400 as r32_typeless
+      u1 = #4106e buf 24 as r32_typeless
+  DISPATCH csdd664ac7 30 x 17 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip1
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip2
+  DISPATCH csdd664ac7 15 x 9 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip2
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip3
+  DISPATCH csdd664ac7 8 x 5 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip3
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip4
+  DISPATCH csdd664ac7 4 x 3 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip4
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip5
+  DISPATCH csdd664ac7 2 x 1 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip5
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip6
+  DISPATCH csdd664ac7 1 x 1 x 1
+      t0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip6
+      u0 = #40b72 tex 1920x1080 r11g11b10f mips8 as r11g11b10f mip7
+  DISPATCH cs0d2a1e73 indirect x1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #40c4e buf 8294400 as r32_typeless
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #40d56 buf 32 +0
+  DISPATCH csef4423b1 indirect x1
+      t0 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t1 = #3e5a2 tex 1920x1080 r32f mips8
+      t2 = #41042 buf 8294400 as r32_typeless
+      u0 = #3d8be tex 1920x1080 rgba16unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #40d56 buf 32 +0
+  DISPATCH csaf18c6e2 240 x 135 x 1
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #3ede2 tex 3840x2160 rgba8srgb as rgba8srgb
+      t2 = #3ebfe tex 3840x2160 rgb10a2unorm as rgb10a2unorm
+      t3 = #dbbe6 tex 256x256 fmt95
+      t4 = #3ee3a tex 3840x2160 r32uint
+      t5 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t6 = #413de tex 3840x2160 r32uint
+      t7 = #3d8be tex 1920x1080 rgba16unorm
+      t8 = #40b72 tex 1920x1080 r11g11b10f mips8
+      u0 = #3dc02 tex 3840x2160 r32uint
+      u1 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #5f376 buf 32 +0
+      b2 = cb #40b46 buf 16 +0
+      b3 = cb #40f0e buf 192 +0
+  copy #3dc02 tex 3840x2160 r32uint -> #413de tex 3840x2160 r32uint
+  clear #40e06 tex 1920x1080 rgba16f to 0 0 0 0
+  render targets: #40e06 tex 1920x1080 rgba16f
+  FULLSCREEN ps05177c3c vsbeee7b09 draw 1 verts viewport 1920x1080 at 0,0 -> #40e06 tex 1920x1080 rgba16f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #927ba tex 512x1 r16f x64 as r16f
+      t2 = #9262e buf 40960
+      t3 = #3e652 tex 2048x2048 r32_typeless x64 as r32f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #3fa9a buf 384 +0
+  render targets: #40dda tex 3840x1080 rgba16f
+  FULLSCREEN psda2d37dc vs612ddc6c draw 3 verts viewport 3840x1080 at 0,0 -> #40dda tex 3840x1080 rgba16f
+      t0 = #3ed5e tex 3840x2160 r32_typeless as r32f
+      t1 = #40e06 tex 1920x1080 rgba16f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #c57da buf 16 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  FULLSCREEN psffe10a4a vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+      t0 = #40dda tex 3840x1080 rgba16f
+      b0 = cb #c57da buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f as r11g11b10f
+  FULLSCREEN psc512f974 vs5e8dde5a draw 4 indices viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #a6122 buf 48 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f depth #3ed5e tex 3840x2160 r32_typeless as d32f
+  draw x1
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN psbeedaaab vs45c9c59d draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #409ba tex 3840x2160 r11g11b10f as r11g11b10f
+      t2 = #3ea1a tex 3840x2160 rgba16snorm as rgba16snorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #a6282 buf 256 +0
+  copy #3ed32 tex 3840x2160 r11g11b10f -> #409ba tex 3840x2160 r11g11b10f
+  render targets: #3ff3e tex 960x540 r11g11b10f
+  FULLSCREEN ps41d730b1 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #3ff3e tex 960x540 r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #4090a tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4090a tex 960x540 r11g11b10f
+      t0 = #3ff3e tex 960x540 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #3ff3e tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #3ff3e tex 960x540 r11g11b10f
+      t0 = #4090a tex 960x540 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #4090a tex 960x540 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 960x540 at 0,0 -> #4090a tex 960x540 r11g11b10f
+      t0 = #3ff3e tex 960x540 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f
+      t0 = #4090a tex 960x540 r11g11b10f
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #3eb7a tex 480x270 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #3eb7a tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #3eb7a tex 480x270 r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #3eb7a tex 480x270 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #406a2 tex 240x135 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #406a2 tex 240x135 r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #406a2 tex 240x135 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #406a2 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #406a2 tex 240x135 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #406a2 tex 240x135 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #4082e tex 120x67 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #4082e tex 120x67 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4082e tex 120x67 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #4082e tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #4082e tex 120x67 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4082e tex 120x67 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #4064a tex 60x33 r11g11b10f
+  FULLSCREEN psfe287427 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4064a tex 60x33 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+  render targets: #4056e tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4056e tex 60x33 r11g11b10f
+      t0 = #4064a tex 60x33 r11g11b10f
+      b0 = cb #c5782 buf 16 +0
+  render targets: #4064a tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4064a tex 60x33 r11g11b10f
+      t0 = #4056e tex 60x33 r11g11b10f
+      b0 = cb #c56fe buf 16 +0
+  render targets: #4056e tex 60x33 r11g11b10f
+  FULLSCREEN ps7db720c9 vs5334fb04 draw 3 verts viewport 60x33 at 0,0 -> #4056e tex 60x33 r11g11b10f
+      t0 = #4064a tex 60x33 r11g11b10f
+      b0 = cb #c5966 buf 16 +0
+  render targets: #405c6 tex 120x67 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 120x67 at 0,0 -> #405c6 tex 120x67 r11g11b10f
+      t0 = #4056e tex 60x33 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #40726 tex 240x135 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 240x135 at 0,0 -> #40726 tex 240x135 r11g11b10f
+      t0 = #405c6 tex 120x67 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #408de tex 480x270 r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 480x270 at 0,0 -> #408de tex 480x270 r11g11b10f
+      t0 = #40726 tex 240x135 r11g11b10f
+      b0 = cb #c564e buf 32 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps1828aeac vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #408de tex 480x270 r11g11b10f
+      b0 = cb #c593a buf 32 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps180ea9ae vs45c9c59d draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t1 = #3769a tex 32x32 rgba8srgb x32
+      t2 = #3769a tex 32x32 rgba8srgb x32
+      t3 = #dbcc2 tex 32x32 rgba8srgb x32
+      t4 = #364f2 tex 1209x680 rgba8srgb
+      t5 = #36392 tex 1209x680 rgba8unorm
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #a6282 buf 256 +0
+      b2 = cb #c517e buf 16 +0
+      b3 = cb #c51d6 buf 16 +0
+      b4 = cb #c55ca buf 32 +0
+      b5 = cb #c56a6 buf 80 +0
+      b6 = cb #6df86 buf 48 +0
+      b7 = cb #c567a buf 32 +0
+      b8 = cb #6dc16 buf 16 +0
+  render targets: #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps0aad5957 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #3696a buf 608 +0
+      b1 = cb #48aea buf 16 +0
+      b2 = cb #c58e2 buf 48 +0
+  render targets: #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+  FULLSCREEN ps88a437a0 vs612ddc6c draw 3 verts viewport 3840x2160 at 0,0 -> #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      t0 = #3ed32 tex 3840x2160 r11g11b10f as r11g11b10f
+  render targets: #3ea46 tex 3840x2160 rgba16f
+  FULLSCREEN ps5d280918 vs5334fb04 draw 3 verts viewport 3840x2160 at 0,0 -> #3ea46 tex 3840x2160 rgba16f
+      t0 = #3e51e tex 3840x2160 r11g11b10f as r11g11b10f
+      b0 = cb #5f416 buf 48 +0
+  render targets: null null null null null null null null
+==== PRESENT (back buffer #3ea46 tex 3840x2160 rgba16f), 0 more
