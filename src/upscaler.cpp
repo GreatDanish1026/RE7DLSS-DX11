@@ -48,6 +48,8 @@
 #include "down_ps.h"      // kDownPs, kDownVs: downsample.hlsl
 #include "down_vs.h"
 #include "mvfix_cs.h"     // kMvFixCs: mvfix.hlsl
+#include "effmask_cs.h"   // kEffMaskCs: effmask.hlsl (effect mask from the colour before the effects)
+#include "effview_cs.h"   // kEffViewCs: effview.hlsl (the mask shown, testing)
 #include "bridge.hpp"
 #include "dlss.hpp"
 #include "version.h"
@@ -67,6 +69,10 @@ constexpr uint32_t kTonemapPs = 0x180ea9ae;  // tonemap, lens effects (t0 by pix
 constexpr uint32_t kSharpenPs = 0x0aad5957;  // film grain (t0); RE7 has no sharpening pass
 constexpr uint32_t kStretchPs = 0x09af4c8f;  // render size -> output size (t0 depth, t1 colour)
 constexpr uint32_t kStretchColor = 1;
+// Volumetric fog blended into the scene colour (from a half-resolution layer, ps05177c3c ->
+// psda2d37dc). In this build the game draws its effects after it, before the TAA (captures
+// 2026-11-16): the effect mask's "before" copy is taken right after this draw.
+constexpr uint32_t kFogPs = 0xffe10a4a;
 constexpr int kToggleHotkey = VK_F9;
 
 // SceneInfo (cb0 of the TAA, tonemap and grain; 608 bytes), as float indices.
@@ -91,7 +97,7 @@ struct Settings {
     // DLSS gets the game's exposure (exposure.hlsl) instead of its own auto-exposure. Off by
     // default: with it, DLSS turned Leon see-through (user, 2026-11-13; the value was right, ~0.09).
     bool gameExposure = false;
-    bool effectMask = true;    // DLSS gets the TAA's effect mask (particles, effects)
+    bool effectMask = true;    // DLSS/FSR get the add-on's effect mask (particles, effects)
     bool textureDetail = true; // material samplers get a mip bias of log2(render scale) when upscaling
     bool longJitter = true;    // when upscaling, the game's 16-position jitter replaced by 8 / scale^2 positions
     float sharpness = 0;       // extra sharpening after DLSS (RCAS), or FSR's own; 0 = off
@@ -437,6 +443,140 @@ bool FixMotion(command_list* cl, resource_view velocity, uint32_t w, uint32_t h,
     return true;
 }
 
+// ---------------------------------------------------------------- effect mask (made by the add-on)
+//
+// RE7's TAA has no effect mask. The game blends its volumetric fog into the scene colour (kFogPs)
+// and then draws its effects (particles, fire, smoke, refraction) into it before the TAA, so: at the
+// fog draw the colour is noted; at the next GPU work on that context (the fog draw has been
+// submitted) it is copied (g_effBefore); at the TAA effmask.hlsl compares the copy with the colour
+// the TAA reads and writes how much the effects changed each pixel (g_effMask, r8) for DLSS (bias
+// current colour) and FSR (reactive). As RE7DLSS (DX12) 1.3.3, where the fog comes after the
+// effects and the mask is made before it instead.
+
+Texture g_effBefore, g_effMask;
+std::mutex g_effMutex;
+resource g_effColor = {0};          // the scene colour to copy at the next GPU work
+command_list* g_effCl = nullptr;    // the context the fog draw ran on
+uint64_t g_effArmed = ~0ull;        // g_frame when the fog draw ran
+uint64_t g_effSnapped = ~0ull;      // g_frame when the colour was copied
+uint64_t g_effMade = ~0ull;         // g_frame when the mask was made
+ID3D11ComputeShader* g_effCs = nullptr;
+ID3D11ComputeShader* g_effViewCs = nullptr;
+ID3D11Buffer* g_effCb = nullptr;
+bool g_effFailed = false;
+bool g_effView = false;             // Advanced: the mask in red instead of the picture (not saved)
+constexpr float kEffThreshold = 0.05f, kEffGain = 4.0f;  // relative change 5% -> 0, 30% -> 1
+
+// At the fog draw.
+void EffArm(command_list* cl, const GameState& g) {
+    if (!g_set.effectMask || !g.rtv[0].handle) return;
+    std::lock_guard<std::mutex> lock(g_effMutex);
+    g_effColor = ViewResource(g.rtv[0]);
+    g_effCl = cl;
+    g_effArmed = g_frame;
+}
+
+// Before any later GPU work on the same context: the colour (fog in, effects not yet) is copied.
+void EffSnapshot(command_list* cl) {
+    if (g_effArmed != g_frame || cl != g_effCl) return;
+    std::lock_guard<std::mutex> lock(g_effMutex);
+    if (g_effArmed != g_frame || cl != g_effCl || !g_effColor.handle) return;
+    const resource color = g_effColor;
+    g_effColor = {0};
+    device* dev = cl->get_device();
+    const resource_desc d = dev->get_resource_desc(color);
+    if (!Ensure(dev, g_effBefore, d.texture.width, d.texture.height, format_to_default_typed(d.texture.format), false,
+                "scene colour before the effects"))
+        return;
+    auto* ctx = reinterpret_cast<ID3D11DeviceContext*>(cl->get_native());
+    ctx->CopyResource(reinterpret_cast<ID3D11Resource*>(g_effBefore.res.handle), reinterpret_cast<ID3D11Resource*>(color.handle));
+    g_effSnapped = g_frame;
+    static bool logged = false;
+    if (!logged) logged = true, Log("effect mask: scene colour copied after the fog (ps%08x)", kFogPs);
+}
+
+bool EffShaders(ID3D11Device* d3d) {
+    if (g_effCs) return true;
+    if (g_effFailed) return false;
+    d3d->CreateComputeShader(kEffMaskCs, sizeof(kEffMaskCs), nullptr, &g_effCs);
+    d3d->CreateComputeShader(kEffViewCs, sizeof(kEffViewCs), nullptr, &g_effViewCs);
+    D3D11_BUFFER_DESC bd = {32, D3D11_USAGE_DEFAULT, D3D11_BIND_CONSTANT_BUFFER, 0, 0, 0};
+    d3d->CreateBuffer(&bd, nullptr, &g_effCb);
+    if (!g_effCs || !g_effViewCs || !g_effCb) {
+        g_effFailed = true;
+        Log("couldn't create the effect mask shader: no effect mask");
+        return false;
+    }
+    return true;
+}
+
+// At the TAA: the mask from the copy and the colour the TAA reads (its t0 view). Null: no mask this frame.
+ID3D11Resource* EffMake(command_list* cl, resource_view after, uint32_t w, uint32_t h) {
+    if (!g_set.effectMask || !after.handle) return nullptr;
+    if (g_effSnapped != g_frame) {
+        static int logged = 0;
+        if (logged++ < 3) Log("effect mask: no copy after the fog this frame: no mask");
+        return nullptr;
+    }
+    device* dev = cl->get_device();
+    auto* d3d = reinterpret_cast<ID3D11Device*>(dev->get_native());
+    if (!BlitReady(d3d) || !EffShaders(d3d) || g_effBefore.w < w || g_effBefore.h < h ||
+        !Ensure(dev, g_effMask, g_effBefore.w, g_effBefore.h, format::r8_unorm, true, "effect mask"))
+        return nullptr;
+    auto* ctx = reinterpret_cast<ID3D11DeviceContext*>(cl->get_native());
+    ID3D11DeviceContext1* ctx1 = nullptr;
+    if (FAILED(ctx->QueryInterface(__uuidof(ID3D11DeviceContext1), reinterpret_cast<void**>(&ctx1)))) return nullptr;
+    ID3DDeviceContextState* game = nullptr;
+    ctx1->SwapDeviceContextState(g_cleanState, &game);
+    ctx1->ClearState();
+    struct {
+        float threshold, gain;
+        uint32_t w, h, pad[4];
+    } p = {kEffThreshold, kEffGain, w, h, {}};
+    ctx1->UpdateSubresource(g_effCb, 0, nullptr, &p, 0, 0);
+    ID3D11ShaderResourceView* srvs[2] = {reinterpret_cast<ID3D11ShaderResourceView*>(g_effBefore.srv.handle),
+                                         reinterpret_cast<ID3D11ShaderResourceView*>(after.handle)};
+    auto* uav = reinterpret_cast<ID3D11UnorderedAccessView*>(g_effMask.uav.handle);
+    ctx1->CSSetShader(g_effCs, nullptr, 0);
+    ctx1->CSSetConstantBuffers(0, 1, &g_effCb);
+    ctx1->CSSetShaderResources(0, 2, srvs);
+    ctx1->CSSetUnorderedAccessViews(0, 1, &uav, nullptr);
+    ctx1->Dispatch((w + 7) / 8, (h + 7) / 8, 1);
+    ctx1->ClearState();
+    ctx1->SwapDeviceContextState(game, nullptr);
+    if (game) game->Release();
+    ctx1->Release();
+    g_effMade = g_frame;
+    static bool logged = false;
+    if (!logged) logged = true, Log("effect mask: made from the scene colour before and after the effects (%ux%u)", w, h);
+    return reinterpret_cast<ID3D11Resource*>(g_effMask.res.handle);
+}
+
+// Debug view: the mask in red over the upscaler's output.
+void EffShow(command_list* cl, Texture& out, uint32_t renderW, uint32_t renderH) {
+    if (!g_effView || g_effMade != g_frame || !g_effViewCs || !out.uav.handle || !g_effMask.srv.handle) return;
+    auto* ctx = reinterpret_cast<ID3D11DeviceContext*>(cl->get_native());
+    ID3D11DeviceContext1* ctx1 = nullptr;
+    if (FAILED(ctx->QueryInterface(__uuidof(ID3D11DeviceContext1), reinterpret_cast<void**>(&ctx1)))) return;
+    ID3DDeviceContextState* game = nullptr;
+    ctx1->SwapDeviceContextState(g_cleanState, &game);
+    ctx1->ClearState();
+    const float p[8] = {static_cast<float>(out.w), static_cast<float>(out.h), static_cast<float>(renderW) / out.w,
+                        static_cast<float>(renderH) / out.h};
+    ctx1->UpdateSubresource(g_effCb, 0, nullptr, p, 0, 0);
+    auto* srv = reinterpret_cast<ID3D11ShaderResourceView*>(g_effMask.srv.handle);
+    auto* uav = reinterpret_cast<ID3D11UnorderedAccessView*>(out.uav.handle);
+    ctx1->CSSetShader(g_effViewCs, nullptr, 0);
+    ctx1->CSSetConstantBuffers(0, 1, &g_effCb);
+    ctx1->CSSetShaderResources(0, 1, &srv);
+    ctx1->CSSetUnorderedAccessViews(0, 1, &uav, nullptr);
+    ctx1->Dispatch((out.w + 7) / 8, (out.h + 7) / 8, 1);
+    ctx1->ClearState();
+    ctx1->SwapDeviceContextState(game, nullptr);
+    if (game) game->Release();
+    ctx1->Release();
+}
+
 // ---------------------------------------------------------------- the game's exposure
 //
 // The TAA multiplies the scene colour by Exposure = WhitePtSrv[0] (the game's auto-exposure,
@@ -671,7 +811,6 @@ bool OnTaa(command_list* cl, const GameState& g) {
     const resource depth = ViewResource(g.lastDsv);
     const resource color = ViewResource(g.psSrv[kTaaColor]);
     const resource motion = ViewResource(g.psSrv[kTaaMotion]);
-    const resource mask = {0};  // RE7's TAA has no effect mask
     const resource target = ViewResource(g.rtv[0]);
     if (!depth.handle || !color.handle || !motion.handle || !target.handle || !g.rtv[0].handle) {
         Fail("TAA inputs not found (depth, colour, velocity or render target)");
@@ -779,6 +918,8 @@ bool OnTaa(command_list* cl, const GameState& g) {
             mvScaleX = mvScaleY = 1.0f;
         }
     }
+    // RE7's TAA has no effect mask: the add-on's own (see "effect mask"), when it made one this frame.
+    ID3D11Resource* const effMask = EffMake(cl, g.psSrv[kTaaColor], renderW, renderH);
 
     if (tech == Tech::Dlss) {
         dlss::Inputs in;
@@ -795,7 +936,7 @@ bool OnTaa(command_list* cl, const GameState& g) {
         in.motionScaleX = mvScaleX;
         in.motionScaleY = mvScaleY;
         in.exposure = GameExposure(cl, g);
-        in.biasMask = g_set.effectMask && mask.handle ? reinterpret_cast<ID3D11Resource*>(mask.handle) : nullptr;
+        in.biasMask = effMask;
         in.reset = reset;
         in.preset = g_set.preset;
         in.mvJittered = g_set.mvJittered;
@@ -815,7 +956,7 @@ bool OnTaa(command_list* cl, const GameState& g) {
         bridge::Inputs in;
         in.color = reinterpret_cast<ID3D11Resource*>(color.handle);
         in.motion = motionIn;
-        in.reactive = g_set.effectMask && mask.handle ? reinterpret_cast<ID3D11Resource*>(mask.handle) : nullptr;
+        in.reactive = effMask;
         in.output = reinterpret_cast<ID3D11Resource*>(g_x.res.handle);
         in.renderWidth = renderW, in.renderHeight = renderH;
         in.outputWidth = outW, in.outputHeight = outH;
@@ -833,6 +974,7 @@ bool OnTaa(command_list* cl, const GameState& g) {
         }
     }
     g_lastUpscale = upscale;
+    EffShow(cl, g_x, renderW, renderH);
 
     bool skip;
     if (upscale) {
@@ -1145,7 +1287,11 @@ void UpscalerDestroyDevice(device* dev) {
     if (g_rcasCs) g_rcasCs->Release();
     if (g_rcasCb) g_rcasCb->Release();
     g_rcasCs = nullptr, g_rcasCb = nullptr;
-    for (Texture* t : {&g_x, &g_xs, &g_y, &g_z, &g_depth32, &g_mv}) Free(*t);
+    for (IUnknown* o : std::initializer_list<IUnknown*>{g_effCs, g_effViewCs, g_effCb})
+        if (o) o->Release();
+    g_effCs = nullptr, g_effViewCs = nullptr, g_effCb = nullptr, g_effFailed = false;
+    g_effColor = {0}, g_effCl = nullptr;
+    for (Texture* t : {&g_x, &g_xs, &g_y, &g_z, &g_depth32, &g_mv, &g_effBefore, &g_effMask}) Free(*t);
     if (g_exposureOne.handle) dev->destroy_resource(g_exposureOne);
     if (g_sceneCb.handle) dev->destroy_resource(g_sceneCb);
     g_exposureOne = g_sceneCb = {0};
@@ -1158,6 +1304,7 @@ void UpscalerDestroyDevice(device* dev) {
 }
 
 void UpscalerBeforeWork(command_list* cl) {
+    EffSnapshot(cl);
     if (!g_restorePending) return;
     g_restorePending = false;
     RestoreGameState(cl);
@@ -1175,6 +1322,7 @@ bool UpscalerOnDraw(command_list* cl, uint32_t vertices, uint32_t instances) {
         case kTonemapPs: OnTonemap(cl, g); return false;
         case kSharpenPs: OnSharpen(cl, g); return false;
         case kStretchPs: return OnStretch(cl, g);
+        case kFogPs: EffArm(cl, g); return false;
         default: return false;
     }
 }
@@ -1322,6 +1470,15 @@ void UpscalerOverlay() {
             Help("When upscaling, the game's 16 camera jitter positions are replaced by as many as DLSS asks for at "
                  "the render resolution (32 at Performance). Fewer leave soft striped patches on still surfaces such "
                  "as faces at Performance.");
+            changed |= ImGui::Checkbox("Effect mask", &g_set.effectMask);
+            Help("The game's anti-aliasing has no mask for particles, fire, smoke and other effects, so the add-on "
+                 "makes one: it compares the picture just before the game draws its effects with the picture "
+                 "after. DLSS and FSR then trust the current frame more there, against ghosting and smearing on "
+                 "effects (they have no motion vectors of their own).");
+            ImGui::BeginDisabled(!g_set.effectMask);
+            ImGui::Checkbox("Show the effect mask (testing)", &g_effView);
+            ImGui::EndDisabled();
+            Help("Shows the mask in red instead of the picture (not saved).");
             changed |= ImGui::Checkbox("Sharper textures", &g_set.textureDetail);
             Help("When upscaling, textures are sampled as at the output resolution (mip bias log2 of the render scale, "
                  "as NVIDIA recommends). Follows the render resolution as it changes.");

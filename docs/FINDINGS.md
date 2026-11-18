@@ -124,3 +124,13 @@ DLSS DLAA, no errors.
 0.1.2 as tested. README rewritten for RE7 (film grain in place of the game's sharpening, no effect
 mask, NVIDIA app override note, RenoDX and FSR 4 on Radeon untested); package
 RE7DLSS-DX11-1.0.0.zip (78,493,611 bytes, 14 files, REFramework TDB49 dinput8.dll).
+
+## Effect mask (1.1.0, 2026-11-18; not yet tested in game)
+
+RE7's TAA has no effect mask; RE7DLSS (DX12) 1.3.3 makes one (effmask.hlsl). In this DX11 build the
+order differs from DX12 (captures 1-3): lighting ps56cef943 -> compute csaf18c6e2 -> volumetric fog
+(ps05177c3c one-vertex draw at half size, psda2d37dc, blended into the scene colour by psffe10a4a) ->
+psc512f974 small copy -> effect draws into the scene colour -> TAA psbeedaaab. So the fog is already
+in before the effects: the add-on copies the scene colour at the first GPU work after psffe10a4a (same
+context) and makes the mask at the TAA (before = the copy, after = TAA t0). No end pass needed.
+Advanced: "Effect mask" (ini EffectMask, on) and "Show the effect mask (testing)" (effview.hlsl).

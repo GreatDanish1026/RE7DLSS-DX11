@@ -36,6 +36,8 @@ $cmd = @(
     "fxc /nologo /T vs_5_0 /E VsMain /O3 /Vn kDownVs /Fh `"$obj\down_vs.h`" `"$root\src\downsample.hlsl`" >nul",
     "fxc /nologo /T ps_5_0 /E PsMain /O3 /Vn kDownPs /Fh `"$obj\down_ps.h`" `"$root\src\downsample.hlsl`" >nul",
     "fxc /nologo /T cs_5_0 /E main /O3 /Vn kMvFixCs /Fh `"$obj\mvfix_cs.h`" `"$root\src\mvfix.hlsl`" >nul",
+    "fxc /nologo /T cs_5_0 /E main /O3 /Vn kEffMaskCs /Fh `"$obj\effmask_cs.h`" `"$root\src\effmask.hlsl`" >nul",
+    "fxc /nologo /T cs_5_0 /E main /O3 /Vn kEffViewCs /Fh `"$obj\effview_cs.h`" `"$root\src\effview.hlsl`" >nul",
     "fxc /nologo /T cs_5_0 /E main /O3 /Vn kExposureCs /Fh `"$obj\exposure_cs.h`" `"$root\src\exposure.hlsl`" >nul",
     ("cl /nologo /std:c++17 /O2 /EHsc /MT /W3 /D_CRT_SECURE_NO_WARNINGS /DNOMINMAX " +
      "/I `"$obj`" /I `"$root\third_party\imgui`" /I `"$root\third_party\reshade\include`" /I `"$root\third_party\dlss\include`" " +
