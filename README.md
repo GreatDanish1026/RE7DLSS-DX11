@@ -1,4 +1,4 @@
-# RE7DLSS-DX11 1.0.0
+# RE7DLSS-DX11 1.1.0
 
 ReShade add-on for the **DirectX 11 version of Resident Evil 7** (Resident Evil 7 biohazard, Steam beta
 branch `dx11_non-rt`, without ray tracing) that replaces the game's TAA with **NVIDIA DLSS** or
@@ -20,6 +20,10 @@ branch `dx11_non-rt`, without ray tracing) that replaces the game's TAA with **N
   version, the jitter left soft striped patches on still faces at Performance). It also gives the
   game a longer jitter sequence while upscaling (32 positions at Performance instead of the game's
   16), as DLSS asks for.
+- **Effect mask** (1.1.0, on by default): the game's anti-aliasing has no mask for particles, fire,
+  smoke and other effects, so the add-on makes one by comparing the picture just before the game
+  draws its effects with the picture after. DLSS and FSR then trust the current frame more there,
+  against ghosting and smearing on effects. The volumetric fog is left out of it.
 - **Sharpening** slider (off by default): AMD's contrast-adaptive sharpening (RCAS) after DLSS, or
   FSR's own for FSR.
 - **Sharper textures** (on by default): when upscaling, textures are sampled as at your screen
@@ -36,7 +40,7 @@ branch `dx11_non-rt`, without ray tracing) that replaces the game's TAA with **N
 
 ## Install
 
-**With Fluffy Mod Manager**: put `RE7DLSS-DX11-1.0.0.zip` in Fluffy Mod Manager's `Games\RE7\Mods`
+**With Fluffy Mod Manager**: put `RE7DLSS-DX11-1.1.0.zip` in Fluffy Mod Manager's `Games\RE7\Mods`
 folder (or drag it onto the manager) and enable it. **By hand**: copy the contents of the zip's
 `RE7DLSS-DX11` folder into the game folder (where `re7.exe` is).
 
@@ -58,7 +62,7 @@ ReShade overlay (Home key), Add-ons tab, **RE7DLSS-DX11**; saved in `ReShade.ini
 - **Status**: what's running (upscaler, render size, native or upscaling), or why it isn't.
 - **Advanced**: upscaling below 100% (off: the upscaler anti-aliases at the render resolution and
   the game stretches the result), the game's film grain at full resolution, the longer jitter
-  sequence, sharper textures, the game's exposure for DLSS (off by default: in Resident Evil 2 it
+  sequence, the effect mask (and a view of it for testing), sharper textures, the game's exposure for DLSS (off by default: in Resident Evil 2 it
   made characters' dithered fade look see-through), and testing switches and a frame capture tool
   for development.
 
